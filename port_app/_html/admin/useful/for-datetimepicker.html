@@ -1,0 +1,40 @@
+
+<!----- Salam Elnur!!! -------->
+<!-- Ornek sehife: ui-general.html ( path: _html/user/ ) -->
+<!-- Comment'leri diqqetle oxu abi (ozum hell etmek istedim meni python hissesine atdi websotorm), ugurlar! -->
+
+<!-- Head icinde pluginin css'lerin qoshursan (eger qoshulu deyilse) -->
+<head>
+    <link rel="stylesheet" href="../../../static/user/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/user/css/vendor/animate.css">
+    <link rel="stylesheet" href="../../../static/user/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../static/user/js/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" href="../../../static/user/js/vendor/datetimepicker/css/bootstrap-datetimepicker.min.css">
+</head>
+
+<!-- Buda sene lazim olan html parcasi -->
+<div class='input-group datetimepicker date'>
+    <input type='text' class="form-control" />
+    <span class="input-group-addon">
+        <span class="fa fa-calendar"></span>
+    </span>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- Important files:  -->
+<script src="../../../static/user/js/vendor/daterangepicker/moment.min.js"></script>
+<script src="../../../static/user/js/vendor/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+<!-- Asagida script icinde ise plugini cagirirsan! -->
+<script>
+    $(window).load(function(){
+
+        <!-- Eger sehifede <script> varsa, sadece asagidakini icine atsan yeterlidi -->
+        $('.datetimepicker').datetimepicker({
+            format: "YYYY-MM-DD HH:mm:ss"
+        });
+
+    });
+</script>
+<!--/ Page Specific Scripts -->

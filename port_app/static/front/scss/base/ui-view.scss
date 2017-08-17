@@ -1,0 +1,273 @@
+/**********************************************
+************ Main side ( sections ) ***********
+***********************************************/
+
+// Elet info section
+.elet-info-section{
+  //padding-top: 48px;
+  //height: 498px;
+
+  .elet-info-box{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 14px;
+  }
+
+  .booking-box{
+    width: 726px;
+    letter-spacing: .6px;
+    float: left;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #454750;
+
+    .booking-form{
+      margin-top: 0;
+    }
+
+    @include breakpoint(visible-xs){
+      width: 100%;
+    }
+    @include breakpoint(visible-sm){
+      width: 100%;
+    }
+
+    .book-btn{
+      margin-bottom: 4px;
+      margin-top: 10px;
+      padding: 7px 23px;
+      border-radius: 8px;
+
+      &:focus, &:active, &:visited{
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .reception-box{
+    float: left;
+    margin: 120px 20px;
+
+    @include breakpoint(visible-xs){
+      margin: 60px 0;
+    }
+
+    .reception-btn{
+      min-width: 170px;
+      font-size: 20px;
+      padding: 10px 30px;
+      margin-left: 20px;
+
+      @include breakpoint(visible-sm){
+        margin-left: 0;
+        margin-bottom: 10px;
+        display: block;
+        //width: 100%;
+      }
+
+      @include breakpoint(visible-xs){
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      .fa{
+        float: left;
+        margin-top: 4px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// Back contents section
+.back-contents-section{
+  padding-top: 44px;
+
+  .back-contents{
+    margin-right: -5px;
+  }
+}
+
+// Location section
+.location-section{
+  padding-top: 24px;
+  //margin-bottom: 70px;
+
+  .location-box{
+    background-color: $el-white;
+    padding: 19px 15px;
+
+    .location-article{
+      padding: 0 11px;
+
+      h3{
+        letter-spacing: .9px;
+        margin-bottom: 20px;
+        margin-top: 14px;
+      }
+      p{
+        letter-spacing: .4px;
+        line-height: 18px;
+        margin-bottom: 29px;
+      }
+    }
+  }
+}
+
+// Nav box section
+.nav-section{
+
+  .nav-content-side{
+    background-color: $el-white;
+    @include padd-topNbottom(30px);
+  }
+}
+.nav-content-box{
+  @include padd-leftNright(15px);
+  margin-bottom: 40px;
+
+
+  .navigate-list{
+
+    li{
+      float: left;
+      font-size: 16px;
+      @include padd-leftNright(8px);
+
+      i.glyphicon{
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .date-box{
+    line-height: 34px;
+
+    .date-title{
+      font-style: italic;
+      font-size: 12px;
+      color: $el-gray-dark;
+    }
+    .date{
+      font-size: 12px;
+    }
+  }
+
+  .table{
+
+    tbody{
+
+      tr{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .checbox-box{
+    line-height: 35px;
+  }
+  .nav-tr-title{
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .nav-tr-code{
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+  .nav-tr-date{
+    line-height: 35px;
+    margin-bottom: 0;
+  }
+}
+
+// Booking and passenger details section
+.bp-detail-section{
+
+  .bp-detail-side{
+    background-color: $el-white;
+    @include padd-leftNright(15px);
+
+    .login-links-list{
+
+      li{
+        @include padd-leftNright(10px);
+      }
+      li+li{
+        border-left: 1px solid #e3e3e3;
+      }
+    }
+  }
+}
+.category-label{
+  margin-right: 10px;
+}
+
+// Booking choose list
+.booking-choose-list{
+
+  li{
+    float: left;
+
+    .radio{
+
+      label{
+        color: #ffffff;
+      }
+    }
+  }
+  li+li{
+    margin-left: 10px;
+  }
+}
+
+.pay-section{
+
+  .container{
+    @include padd-topNbottom(40px);
+  }
+
+  .payment-method-list{
+
+    .img-box{
+      max-width: 180px;
+    }
+  }
+
+  .payment-detail-box{
+    padding: 70px 40px;
+  }
+
+}
+
+.bg-white{
+  background-color: #ffffff;
+}
+
+.bor-dash{
+  border-color: rgba(0, 0, 0, .4);
+  border-width: 1px 0;
+  border-style: dashed;
+}
+.bor-left{
+  border-color: rgba(0, 0, 0, .4);
+  border-width: 0 0 0 1px;
+  border-style: dashed;
+}
+.bor-right{
+  border-color: rgba(0, 0, 0, .4);
+  border-width: 0 1px 0 0;
+  border-style: dashed;
+}
+
+.pay-and-book{
+  @include padd-topNbottom(30px);
+
+  h6{
+
+    a{
+      color: #0c0c0c;
+    }
+  }
+}

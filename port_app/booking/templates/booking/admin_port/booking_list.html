@@ -1,0 +1,161 @@
+{% extends 'admin_port/layout.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block page-title %}  {% trans 'Bookings List' %} {% endblock page-title %}
+
+
+{% block content %}
+    <!-- ====================================================
+        ================= CONTENT ===============================
+        ===================================================== -->
+    <section id="content">
+
+    <div class="page page-dashboard">
+
+        <div class="pageheader">
+
+            <h2>{% trans 'Admin' %} <span>{% trans '// sasas...' %}</span></h2>
+
+            <div class="page-bar">
+
+                <ul class="page-breadcrumb">
+                    <li>
+                        <a href="#"><i class="fa fa-home"></i> {% trans 'Port of Baku' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% trans 'Admin' %}</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- row -->
+        <div class="row">
+
+            <!-- col -->
+            <div class="col-md-12">
+
+                <!-- tile -->
+                <section class="tile">
+
+                    <!-- tile header -->
+                    <div class="tile-header dvd dvd-btm">
+                        <h1 class="custom-font"><strong>{% trans 'Define' %} </strong>{% trans 'User' %}</h1>
+                        <ul class="controls">
+                            <li>
+
+                                <a role="button" tabindex="0" class="tile-toggle">
+                                    <span class="minimize"><i class="fa fa-angle-down"></i>&nbsp;&nbsp;&nbsp;{% trans 'Minimize' %}</span>
+                                    <span class="expand"><i class="fa fa-angle-up"></i>&nbsp;&nbsp;&nbsp;{% trans 'Expand' %}</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /tile header -->
+                    <div class="tile-widget">
+
+                        <div class="row">
+
+                            <div class="col-sm-3 col-sm-offset-5"></div>
+
+                            <div class="col-sm-9">
+                                {% include "partials/search.html" %}
+                            </div>
+                            <!-- /.col-sm-9 -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- tile body -->
+                    {% if object_list %}
+                        <div class="tile-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table mb-0" id="usersList">
+                                    <thead>
+                                    <tr>
+                                        <th>{% trans 'Booking ID' %}</th>
+                                        <th>{% trans 'Owner' %}</th>
+                                        <th>{% trans 'Transit type' %}</th>
+                                        <th>{% trans 'Booking type' %}</th>
+                                        <th>{% trans 'Booking Status' %}</th>
+                                        <th>{% trans 'Booking created at' %}</th>
+                                        <th>{% trans 'Booking cargo count' %}</th>
+                                        <th>{% trans 'Booking passenger count' %}</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for booking in object_list %}
+                                    <tr>
+                                        <td>{{ booking.booking_id }}</td>
+                                        <td>{{ booking.owner.get_full_name }}</td>
+                                        {% if booking.transit_type == '1' %}
+                                            <td><span class="label bg-success"> Transit </span> </td>
+                                        {% elif booking.transit_type == '2' %}
+                                            <td><span class="label bg-orange"> Non Transit </span> </td>
+                                        {% endif %}
+
+                                        {% if booking.booking_type == '2' %}
+                                            <td><span class="label bg-success"> Return </span> </td>
+                                        {% elif booking.booking_type == '1' %}
+                                            <td><span class="label bg-orange"> One way </span> </td>
+                                        {% endif %}
+
+                                        {% if booking.done %}
+                                            <td><span class="label bg-greensea"> {{ booking.done }} </span> </td>
+                                        {% else %}
+                                            <td><span class="label bg-red"> {{ booking.done }} </span> </td>
+                                        {% endif %}
+                                        <td>{{ booking.created_at }}</td>
+                                        <td>{{ booking.cargo_count }}</td>
+                                        <td>{{ booking.passenger_count }}</td>
+                                        <td>
+                                            <a href="{% url  'booking:booking-admin-update' pk=booking.pk %}" class="btn btn-success btn-xs text-center"><i class="fa fa-cog"></i> {% trans 'Manage' %}</a>
+                                        </td>
+
+                                    </tr>
+
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tile-footer dvd dvd-top">
+                            <div class="row">
+
+                                <div class="col-sm-3 col-sm-offset-5 text-center">
+                                    <small class="text-muted">{% trans 'showing 20-30 of 50 items' %}</small>
+                                </div>
+
+                                {% include "partials/pagination.html" %}
+
+                            </div>
+                        </div>
+                    {% endif %}
+
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </section>
+    <!--/ CONTENT -->
+{% endblock content %}
+
+
+
+
+{% block js-script %}
+
+    <!--/ Page Specific Scripts -->
+{% endblock js-script %}

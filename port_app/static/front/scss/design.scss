@@ -1,0 +1,81 @@
+/*  Imported styles
+----------------------------------------------------*/
+@import "compass";
+@import "bootstrap";
+
+
+/*  Project standarts
+----------------------------------------------------*/
+
+// Jquery ui datepicker
+@import "../css/jquery-ui.css";
+
+
+
+
+
+
+// ******************************
+// Import template styles
+// ******************************
+
+// Utilities
+@import "utilities/mixins";
+
+// Quarks
+@import "quarks/fonts";
+@import "quarks/icons";
+@import "quarks/sprite";
+@import "quarks/links";
+@import "quarks/lists";
+@import "quarks/paragraphs";
+
+/////////////////////////// Base
+@import "base/header";
+@import "base/ui-view";
+@import "base/footer";
+
+// Molecules
+@import "molecules/regi-list";
+@import "molecules/back-contents";
+@import "molecules/follow-box";
+@import "molecules/social-list";
+@import "molecules/booking-box";
+
+// Atoms
+@import "atoms/buttons";
+@import "atoms/flag";
+@import "atoms/media";
+@import "atoms/grids";
+@import "atoms/dropdown";
+@import "atoms/form";
+@import "atoms/navbar";
+@import "atoms/navs";
+@import "atoms/pages";
+@import "atoms/tables";
+@import "atoms/tabs";
+@import "atoms/hr-line";
+
+
+
+
+@import "bootstrap";
+@import "project-ui";
+
+
+// Font awesome
+@import "../css/font-awesome.css";
+
+
+// Choosen plugin
+@import "../css/chosen.css";
+@import "../css/prism.css";
+
+
+
+// ******************************
+// Import other styles
+// ******************************
+@import "style";
+
+

@@ -1,0 +1,37 @@
+{% load widget_tweaks get_dict_obj %}
+
+{% if field.is_hidden %}
+    {{ field }}
+{% else %}
+{#    {% annotate_form_field field %}#}
+
+    {% if field|widget_type == 'radioselect' %}
+        <div class="clearfix well well-sm" style="margin-top: 10px;">
+            <strong class="small text-muted section{% if field.errors %} text-danger{% endif %}">{{ field.label }}:</strong>
+            <ul class="list-unstyled list-inline">
+                {% for choice in field %}
+                    <li>
+                        {{ choice }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% if field.errors %}<div class="small alert alert-danger nm" role="alert">{{ field.errors }}</div> {% endif %}
+        </div>
+
+    {% elif field|widget_type == 'dateinput' %}
+{#        {{ field|widget_type }}#}
+        <div class="form-group{% if field.errors %} has-error{% endif %}">
+            <label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+            {{ field|add_class:'form-control birthpicker' }}
+            {% if field.errors %}<div class="small alert alert-danger" role="alert">{{ field.errors }}</div> {% endif %}
+        </div>
+
+    {% else %}
+        <div class="form-group{% if field.errors %} has-error{% endif %}">
+            <label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+            {{ field|add_class:'form-control' }}
+            {% if field.errors %}<div class="small alert alert-danger" role="alert">{{ field.errors }}</div> {% endif %}
+        </div>
+
+    {% endif %}
+{% endif %}

@@ -1,0 +1,89 @@
+// Booking box
+.booking-box {
+  background-color: $el-white;
+  @include padd-leftNright(8px);
+
+  /*.booking-head {
+    padding-top: 10px;
+
+    .box-title {
+      font-size: 24px;
+      font-weight: lighter;
+      color: $el-black;
+      margin-top: 7px;
+      position: relative;
+      padding-bottom: 8px;
+
+      &:after {
+        content: '';
+        @include abs-pos(100%, 44px, auto, 44px);
+        border: 1px solid #84bbe6;
+        display: block;
+      }
+    }
+  }*/
+  .booking-body {
+
+    .booking-form {
+      margin-top: 30px;
+
+      /*.form-group {
+        margin-bottom: 11px;
+
+        &.pull-left {
+          margin-right: 8px;
+        }
+      }
+
+      label.label {
+        color: #9b9d9e;
+        font-size: 12px;
+        margin-bottom: 2px;
+      }
+      select {
+        font-size: 16px;
+        height: 32px;
+      }
+      input.form-control {
+        height: 29px;
+      }*/
+
+      .calendar-box {
+        position: relative;
+
+        .pico-calendar {
+          content: '';
+          @include abs-pos(auto, 8px, 6px, auto);
+          cursor: pointer;
+        }
+      }
+
+      .multiple-box {
+        //padding-top: 11px;
+      }
+
+      .form-select {
+        @include border-left-radius(0 !important);
+      }
+
+      .vehicle-label {
+        margin-top: 5px;
+      }
+
+      .vehicle-types {
+        max-height: 220px;
+
+        .row {
+          margin-bottom: 10px;
+        }
+      }
+
+      ul#id_type {
+        color: white;
+        @extend .list-unstyled;
+        @extend .list-inline;
+      }
+
+    }
+  }
+}

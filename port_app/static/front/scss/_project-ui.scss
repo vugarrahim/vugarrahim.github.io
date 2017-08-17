@@ -1,0 +1,96 @@
+/*  Helper classes
+----------------------------------------------------*/
+//////////////////////////
+// Dynamic classes
+//////////////////////////
+@each $slug, $position in (t, top),
+                         (b, bottom),
+                         (l, left),
+                         (r, right) {
+  .nm-#{$slug} {
+    margin-#{$position}: 0 !important;
+  }
+  .np-#{$slug} {
+    padding-#{$position}: 0 !important;
+  }
+  .nb-#{$slug} {
+    border-#{$position}: none !important;
+  }
+}
+//////////////////////////
+// Static classes
+//////////////////////////
+.nm {
+  margin: 0 !important;
+}
+
+.np {
+  padding: 0 !important;
+}
+
+.nb {
+  border: none !important;
+}
+
+.clear {
+  clear: both;
+}
+
+.font-w-normal {
+  font-weight: normal !important;
+}
+
+.link-underlined {
+  text-decoration: underline;
+}
+
+.bg-trns {
+  background: transparent !important;
+}
+
+.section {
+  margin-bottom: $section-distance !important;
+}
+
+.img-responsive-inline {
+  @include img-responsive(inline-block);
+}
+
+.display-inline {
+  display: inline-block
+}
+
+.text-none {
+  text-decoration: none !important
+}
+
+.text-underline{
+  text-decoration: underline;
+}
+
+.relative {
+  position: relative
+}
+
+.absolute {
+  position: absolute
+}
+
+.resize {
+  resize: none
+}
+
+.over-hide {
+  overflow: hidden
+}
+
+.abc-image{
+  padding: 4px;
+}
+.cur-pot{
+  cursor: pointer !important;
+}
+
+//  UI - special texts
+// --------------------------------------------------
+@include text-emphasis-variant('.text-white', #fff);

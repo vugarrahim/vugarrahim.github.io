@@ -1,0 +1,8 @@
+// hr-line
+hr{
+
+  &.red-line{
+    background-color: $el-red;
+    height: 2px;
+  }
+}

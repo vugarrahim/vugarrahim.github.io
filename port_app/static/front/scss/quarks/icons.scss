@@ -1,0 +1,37 @@
+// Icons
+
+$pico-spacing: 5px;
+@import "pico/*.png";
+
+.pico {
+  @extend %imgsprite;
+
+  &.pico-login-icon {
+    @include pico-sprite(login-icon);
+    @include sprite-dimensions($pico-sprites, login-icon);
+  }
+  &.pico-user-icon {
+    @include pico-sprite(user-icon);
+    @include sprite-dimensions($pico-sprites, user-icon);
+  }
+  &.pico-user-icon {
+    @include pico-sprite(user-icon);
+    @include sprite-dimensions($pico-sprites, user-icon);
+  }
+  &.pico-fb {
+    @include pico-sprite(fb-icon);
+    @include sprite-dimensions($pico-sprites, fb-icon);
+  }
+  &.pico-tw {
+    @include pico-sprite(tw-icon);
+    @include sprite-dimensions($pico-sprites, tw-icon);
+  }
+  &.pico-tube {
+    @include pico-sprite(tube-icon);
+    @include sprite-dimensions($pico-sprites, tube-icon);
+  }
+  &.pico-calendar {
+    @include pico-sprite(calendar-icon);
+    @include sprite-dimensions($pico-sprites, calendar-icon);
+  }
+}

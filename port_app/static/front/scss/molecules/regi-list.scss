@@ -1,0 +1,32 @@
+// regi-list
+.regi-list{
+
+  li{
+    float: left;
+    margin-right: 2px;
+
+    @include breakpoint(visible-xs){
+      margin-right: 0;
+      width: 50%;
+    }
+
+    .regi-box{
+      display: block;
+      padding: 0 13px;
+
+      i.pico{
+        margin-right: 6px;
+        margin-bottom: -1px;
+      }
+
+      .regi-titles{
+        color: $el-gray-dark;
+        font-size: 12px;
+      }
+    }
+  }
+  li+li{
+    margin-right: 0;
+    border-left: 1px solid $el-gray;
+  }
+}

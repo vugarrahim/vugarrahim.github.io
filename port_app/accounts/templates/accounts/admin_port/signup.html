@@ -1,0 +1,57 @@
+{% extends 'admin_port/base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block page-title %}  {% trans 'Sign up' %} {% endblock page-title %}
+{% block layout %}
+    <div class="page page-core page-login">
+
+                <div class="text-center">{% trans 'Port of Baku' %}</div>
+
+                <div class="container w-420 p-15 bg-white mt-40 text-center">
+
+                    <h2 class="text-light text-greensea">{% trans 'Sign up' %}</h2>
+
+                    <form name="form" class="form-validation mt-20" method="post">{% csrf_token %}
+                        <p class="help-block text-left">
+                            {% trans 'Enter your personal details below:' %}
+                        </p>
+                        {% for field in form.visible_fields %}
+                            {% if field.html_name == 'accept' %}
+                                <div class="form-group text-left">
+                                    {% if field.errors %} <div class="alert alert-danger" role="alert">{{ field.errors }}</div> {% endif %}
+                                    <label class="checkbox checkbox-custom-alt checkbox-custom-sm inline-block">
+                                        {{ field }}<i></i> {% trans 'I agree to the' %} <a href="{% url 'terms' %}">{% trans 'Terms of Service' %}</a> &amp; <a href="{% url 'privacy' %}">{% trans 'Privacy Policy' %}</a>
+                                    </label>
+                                </div>
+                            {% else %}
+                            <div class="form-group{% if field.errors %} has-error{% endif %}">
+                                {% if field.errors %} <div class="alert alert-danger" role="alert">{{ field.errors }}</div> {% endif %}
+                                <label class="font-pg"{% if field.errors %}
+                                       data-toggle="tooltip" title="{% for error in field.errors %}{{ error|escape }}{% endfor %}"{% endif %}
+                                       for="{{ field.id_for_label }}"></label>
+                                {{ field|add_class:'form-control underline-input' }}
+                                {{ field.placeholder }}
+                                {% if field.help_text %}<span class="help-block">{{ field.help_text }}</span>{% endif %}
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+
+
+                        <!--<input type="submit">-->
+                        <div class="bg-slategray lt wrap-reset mt-20 text-left clearfix">
+                            <p class="m-0 pull-left">
+                                <!--<a href="index.html" class="btn btn-greensea b-0 text-uppercase pull-right">Submit</a>-->
+                                <a href="{% url 'accounts:login' %}" class="btn btn-lightred b-0 text-uppercase">{% trans 'Back' %}</a>
+                            </p>
+                            <button class="btn btn-greensea b-0 text-uppercase pull-right"
+                                    type="submit">
+                                {% trans 'Submit' %}
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+{% endblock layout %}

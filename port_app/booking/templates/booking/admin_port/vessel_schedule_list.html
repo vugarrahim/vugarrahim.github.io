@@ -1,0 +1,198 @@
+{% extends 'admin_port/layout.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block page-title %}  {% trans 'Vessel Shedule List' %} {% endblock page-title %}
+
+
+{% block content %}
+    <!-- ====================================================
+        ================= CONTENT ===============================
+        ===================================================== -->
+    <section id="content">
+
+    <div class="page page-dashboard">
+
+        <div class="pageheader">
+
+            <h2>{% trans 'Admin' %} <span>{% trans '// sasas...' %}</span></h2>
+
+            <div class="page-bar">
+
+                <ul class="page-breadcrumb">
+                    <li>
+                        <a href="#"><i class="fa fa-home"></i> {% trans 'Port of Baku' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% trans 'Admin' %}</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- row -->
+        <div class="row">
+
+            <!-- col -->
+            <div class="col-md-12">
+
+                <!-- tile -->
+                <section class="tile">
+
+                    <!-- tile header -->
+                    <div class="tile-header dvd dvd-btm">
+                        <h1 class="custom-font"><strong>{% trans 'Define' %} </strong>{% trans 'User' %}</h1>
+                        <ul class="controls">
+                            <li>
+
+                                <a role="button" tabindex="0" class="tile-toggle">
+                                    <span class="minimize"><i class="fa fa-angle-down"></i>&nbsp;&nbsp;&nbsp;{% trans 'Minimize' %}</span>
+                                    <span class="expand"><i class="fa fa-angle-up"></i>&nbsp;&nbsp;&nbsp;{% trans 'Expand' %}</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /tile header -->
+
+                    <!-- tile widget -->
+                    <div class="tile-widget">
+
+                        <div class="row mb-40">
+
+                            <div class="col-sm-3 col-sm-offset-5"></div>
+
+                            <div class="col-sm-9">
+                                {% include "partials/search.html" %}
+                            </div>
+                            <!-- /.col-sm-9 -->
+
+                        </div>
+                        <form method="get" class="form-inline">
+                            <div class="form-group">
+                                <select name="vessel" class="form-control">
+                                    <option value="">---------------</option>
+                                    {% for vessel in vessels %}
+                                    <option value="{{ vessel.pk }}">{{ vessel.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group ml-5">
+                                <select name="direction" class="form-control">
+                                    <option value="">---------------</option>
+                                    {% for direction in directions %}
+                                    <option value="{{ direction.pk }}">{{ direction }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group ml-5">
+                                <div class='input-group datetimepicker date'>
+                                    <input type="text" class="form-control" name="date-1">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group ml-5">
+                                <div class='input-group datetimepicker date'>
+                                    <input type="text" class="form-control" name="date-2">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <input type="submit" class="btn btn-primary ml-5" value="Submit">
+                        </form>
+
+                    </div>
+                    <!-- /tile widget -->
+
+                    <!-- tile body -->
+                    {% if object_list %}
+                        <div class="tile-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table mb-0" id="usersList">
+                                    <thead>
+                                    <tr>
+                                        <th>{% trans 'Schedule ID' %}</th>
+                                        <th>{% trans 'Vessel' %}</th>
+                                        <th>{% trans 'Direction' %}</th>
+                                        <th>{% trans 'Arrival date' %}</th>
+                                        <th>{% trans 'Departure date' %}</th>
+                                        <th>{% trans 'Current passenger count' %}</th>
+                                        <th>{% trans 'Current cargo capacity' %}</th>
+                                        <!--<th>Username</th>-->
+                                        <!--<th>Status</th>-->
+                                        <!--<th style="width:30px;"></th>-->
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for vessel_schedule in object_list %}
+                                        <tr  style="cursor: pointer;">
+                                            <!--<td><label class="checkbox checkbox-custom-alt checkbox-custom-sm m-0"><input type="checkbox" class="selectMe"><i></i></label></td>-->
+                                            <td>{{ vessel_schedule.schedule_id }}</td>
+                                            <td>{{ vessel_schedule.vessel.name }}</td>
+                                            <td>{{ vessel_schedule.direction }}</td>
+                                            <td>{{ vessel_schedule.arrival_date }}</td>
+                                            <td>{{ vessel_schedule.departure_date }}</td>
+                                            <td>{{ vessel_schedule.current_passenger_count }}</td>
+                                            <td>{{ vessel_schedule.current_cargo_capacity }}</td>
+                                            <td>
+                                                <a href="{% url 'booking:vessels-schedule-update' pk=vessel_schedule.pk %}" class="btn btn-success btn-xs text-center"><i class="fa fa-cog"></i> {% trans 'Manage' %}</a>
+                                            </td>
+                                        </tr>
+
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a href="" id="triggerLink"></a>
+
+                        </div>
+                        <div class="tile-footer dvd dvd-top">
+                            <div class="row">
+
+                                <div class="col-sm-3 col-sm-offset-5 text-center">
+                                    <small class="text-muted">{% trans 'showing 20-30 of 50 items' %}</small>
+                                </div>
+
+                                {% include "partials/pagination.html" %}
+
+                            </div>
+                        </div>
+                    {% endif %}
+                    <!-- /tile body -->
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </section>
+    <!--/ CONTENT -->
+{% endblock content %}
+
+
+
+{% block js-script %}
+
+    <script>
+        $(window).load(function(){
+
+            $('.footable').footable();
+            $('.datetimepicker').datetimepicker({
+                format: "YYYY-MM-DD HH:mm:ss"
+            });
+
+        });
+    </script>
+    <!--/ Page Specific Scripts -->
+{% endblock js-script %}

@@ -1,0 +1,514 @@
+{% extends 'admin_port/base.html' %}
+{% load permission %}
+{% load i18n %}
+{% load staticfiles %}
+{% block layout %}
+
+    {% block header %}
+        <section id="header">
+        <header class="clearfix">
+
+        <!-- Branding -->
+        <div class="branding text-center">
+            <a class="inline-block" href="{% url 'accounts:dashboard' %}">
+                <img src="{% static 'images/logo-white.svg' %}" alt="" class="img-responsive">
+            </a>
+        </div>
+        <!-- Branding end -->
+
+
+        <!-- Left-side navigation -->
+        <ul class="nav-left pull-left list-unstyled list-inline">
+            <li class="sidebar-collapse divided-right">
+                <a role="button" tabindex="0" class="collapse-sidebar">
+                    <i class="fa fa-outdent"></i>
+                </a>
+            </li>
+        </ul>
+        <!-- Left-side navigation end -->
+
+
+        <!-- Right-side navigation -->
+        <ul class="nav-right pull-right list-inline">
+
+        <li class="dropdown nav-profile">
+
+            <a href class="dropdown-toggle" data-toggle="dropdown">
+                <span>{{ request.user.get_full_name }} <i class="fa fa-angle-down"></i></span>
+            </a>
+
+            <ul class="dropdown-menu animated littleFadeInRight" role="menu">
+                <li>
+                    <a href="{% url 'accounts:password-change' %}" role="button" tabindex="0">
+                        <i class="fa fa-lock"></i>{% trans 'Change password' %}
+                    </a>
+                </li>
+                <li>
+                    <a role="button" tabindex="0">
+                        <a href="{% url 'accounts:logout' %}"><i class="fa fa-sign-out"></i> {% trans 'Logout' %}</a>
+                    </a>
+                </li>
+
+            </ul>
+
+        </li>
+
+            <li class="dropdown">
+
+                <a href class="dropdown-toggle" data-toggle="dropdown" style="width: 60px; padding: 5px 10px;">
+                    <img src="{% static 'images/flags/United-States-of-America.png' %}" alt="" class="img-responsive">
+                </a>
+
+                <div class="dropdown-menu pull-right panel panel-default animated littleFadeInUp" role="menu">
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item" style="padding: 10px 5px; line-height: 32px">
+                            <a role="button" tabindex="0" class="media clearfix">
+                                <img src="{% static 'images/flags/United-States-of-America.png' %}" alt="" class="pull-left" style="width: 60px;"> {% trans 'English' %}
+                            </a>
+                        </li>
+
+                        <li class="list-group-item" style="padding: 10px 5px; line-height: 32px">
+                            <a role="button" tabindex="0" class="media clearfix">
+                                <img src="{% static 'images/flags/Azerbaijan.png' %}" alt="" class="pull-left" style="width: 60px;"> {% trans 'Azərbaycanca' %}
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </li>
+
+        </ul>
+        <!-- Right-side navigation end -->
+
+
+        </header>
+
+        </section>
+        <!--/ HEADER Content  -->
+    {% endblock header %}
+
+
+    {% block sidebar %}
+        <!-- =================================================
+            ================= CONTROLS Content ===================
+            ================================================== -->
+        <div id="controls">
+
+
+        <!-- ================================================
+        ================= SIDEBAR Content ===================
+        ================================================= -->
+        <aside id="sidebar">
+
+
+        <div id="sidebar-wrap">
+
+        <div class="panel-group slim-scroll" role="tablist">
+        <div class="panel panel-default">
+        <div class="panel-heading mt-40" role="tab">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#sidebarNav">
+                    {% trans 'Navigation' %} <i class="fa fa-angle-up"></i>
+                </a>
+            </h4>
+        </div>
+        <div id="sidebarNav" class="panel-collapse collapse in" role="tabpanel">
+            <div class="panel-body">
+
+
+                <!-- ===================================================
+                ================= NAVIGATION Content ===================
+                ==================================================== -->
+                {% url 'accounts:dashboard' as dashboard %}
+                {% url 'accounts:user-list' as user_list %}
+                {% url 'accounts:agent-list' as agent_list %}
+                {% url 'accounts:agent-add' as agent_add %}
+                {% url 'booking:booking-check-list' as booking_check_list %}
+                {% url 'booking:vessels-schedule-list' as vessels_schedule_list %}
+                {% url 'booking:vessels-schedule-add' as vessels_schedule_add %}
+                {% url 'booking:booking-admin-list' as booking_admin_list %}
+                {% url 'booking:agent-balance-list' as agent_balance_list %}
+                {% url 'booking:agent-transaction-list' as agent_transaction_list %}
+                <ul id="navigation">
+                    <li {% if request.path == dashboard %} class="active" {% endif %}><a href="{% url 'accounts:dashboard' %}"><i class="fa fa-dashboard"></i> <span>{% trans 'Dashboard' %}</span></a></li>
+                    {% if request.user|has_perm_accounts:"user_all_view" %}
+                        <li {% if request.path == user_list %} class="active" {% endif %}><a href="{% url 'accounts:user-list' %}"><i class="fa fa-users"></i> <span>{% trans 'Users' %}</span></a></li>
+                    {% endif %}
+                    {% if request.user|has_perm_accounts:"agent_all_view" or request.user|has_perm_accounts:"add_agent" %}
+                        <li {% if request.path == agent_list or request.path == agent_add %} class="active" {% endif %}>
+                            <a role="button" tabindex="0"><i class="fa fa-ticket"></i> <span>{% trans 'Agency' %}</span></a>
+                            <ul>
+                                {% if request.user|has_perm_accounts:"agent_all_view" %}
+                                    <li><a href="{% url 'accounts:agent-list' %}"><i class="fa fa-plus"></i> {% trans 'List' %}</a></li>
+                                {% endif %}
+                                {% if request.user|has_perm_accounts:"add_agent" %}
+                                    <li><a href="{% url 'accounts:agent-add' %}"><i class="fa fa-ticket"></i> {% trans 'Create' %}</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endif %}
+                    {% if request.user|has_perm:"bookingcheckin_view" %}
+                        <li {% if request.path == booking_check_list %} class="active" {% endif %}><a href="{% url 'booking:booking-check-list' %}"><i class="fa fa-check-square-o"></i> <span>{% trans 'Check-in' %}</span></a></li>
+                    {% endif %}
+                    {% if request.user|has_perm:"vesselschedule_all_view" or request.user|has_perm:"add_vesselsschedule" %}
+                        <li {% if request.path == vessels_schedule_list or request.path == vessels_schedule_add %} class="active" {% endif %}>
+                            <a role="button" tabindex="0"><i class="fa fa-calendar-plus-o"></i> <span>{% trans 'Schedule' %}</span></a>
+
+                            <ul>
+                                {% if  request.user|has_perm:"vesselschedule_all_view" %}
+                                    <li><a href="{% url 'booking:vessels-schedule-list' %}"><i class="fa fa-plus"></i> {% trans 'List' %}</a></li>
+                                {% endif %}
+                                {% if request.user|has_perm:"add_vesselsschedule" %}
+                                    <li><a href="{% url 'booking:vessels-schedule-add' %}"><i class="fa fa-ticket"></i> {% trans 'Create' %}</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                    {% if request.user|has_perm:"bookinginformation_all_view" or request.user|has_perm:"bookinginformation_view" or request.user|has_perm:"bookinginformation_super_create" %}
+                        <li {% if request.path == booking_admin_list %} class="active" {% endif %}>
+                            <a role="button" tabindex="0"><i class="fa fa-ticket"></i> <span>{% trans 'Booking' %}</span></a>
+                            <ul>
+                                {% if request.user|has_perm:"bookinginformation_all_view" or request.user|has_perm:"bookinginformation_view" %}
+                                    <li><a href="{% url 'booking:booking-admin-list' %}"><i class="fa fa-plus"></i> {% trans 'List' %}</a></li>
+                                {% endif %}
+                                {% if request.user|has_perm:"add_bookinginformation" %}
+                                    <li><a href="{% url 'booking:booking-admin-create-step1' %}"><i class="fa fa-ticket"></i>{% trans 'Create' %}</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endif %}
+                    {% if request.user|has_perm:"balance_all_view" or request.user|has_perm:"balance_view" or request.user|has_perm:"transactionagentbalance_all_view" or request.user|has_perm:"add_transactionagentbalance"%}
+                    <li {% if request.path == agent_balance_list or request.path == agent_transaction_list %} class="active" {% endif %}>
+                        <a role="button" tabindex="0"><i class="fa fa-money"></i> <span>{% trans 'Billing' %}</span></a>
+                        <ul>
+                            {% if request.user|has_perm:"balance_all_view" or request.user|has_perm:"balance_view" %}
+                                <li><a role="button" tabindex="0"><i class="fa fa-balance-scale"></i> <span>{% trans 'Balance' %}</span></a>
+                                    <ul>
+                                        <li><a href="{% url 'booking:agent-balance-list' %}"><i class="fa fa-caret-right"></i> {% trans 'List' %}</a></li>
+                                    </ul>
+                                </li>
+                            {% endif %}
+                            {% if request.user|has_perm:"transactionagentbalance_all_view" or request.user|has_perm:"add_transactionagentbalance" %}
+                                <li><a role="button" tabindex="0"><i class="fa fa-credit-card"></i> <span>{% trans 'Transaction' %}</span></a>
+                                    <ul>
+                                        {% if request.user|has_perm:"transactionagentbalance_all_view" or request.user|has_perm:"transactionagentbalance_view" %}
+                                            <li><a href="{% url 'booking:agent-transaction-list' %}"><i class="fa fa-caret-right"></i>{% trans 'List' %}</a></li>
+                                        {% endif %}
+                                        {% if request.user|has_perm:"add_transactionagentbalance" %}
+                                            <li><a href="{% url 'booking:agent-transaction-add' %}"><i class="fa fa-caret-right"></i> {% trans 'Create' %}</a></li>
+                                        {% endif %}
+
+                                    </ul>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                    {% endif %}
+
+                </ul>
+                <!--/ NAVIGATION Content -->
+
+
+            </div>
+        </div>
+        </div>
+        </div>
+
+        </div>
+
+
+        </aside>
+        <!--/ SIDEBAR Content -->
+
+        </div>
+        <!--/ CONTROLS Content -->
+    {% endblock sidebar %}
+
+
+    {% block content %}
+        <!-- ====================================================
+            ================= CONTENT ===============================
+            ===================================================== -->
+        <section id="content">
+
+        <div class="page page-dashboard">
+
+        </div>
+
+        </section>
+        <!--/ CONTENT -->
+    {% endblock content %}
+{% endblock layout %}
+
+
+
+{% block js-script %}
+    <script>
+    $(window).load(function () {
+        // Initialize Statistics chart
+        var data = [
+            {
+                data: [
+                    [1, 15],
+                    [2, 40],
+                    [3, 35],
+                    [4, 39],
+                    [5, 42],
+                    [6, 50],
+                    [7, 46],
+                    [8, 49],
+                    [9, 59],
+                    [10, 60],
+                    [11, 58],
+                    [12, 74]
+                ],
+                label: 'Unique Visits',
+                points: {
+                    show: true,
+                    radius: 4
+                },
+                splines: {
+                    show: true,
+                    tension: 0.45,
+                    lineWidth: 4,
+                    fill: 0
+                }
+            },
+            {
+                data: [
+                    [1, 50],
+                    [2, 80],
+                    [3, 90],
+                    [4, 85],
+                    [5, 99],
+                    [6, 125],
+                    [7, 114],
+                    [8, 96],
+                    [9, 130],
+                    [10, 145],
+                    [11, 139],
+                    [12, 160]
+                ],
+                label: 'Page Views',
+                bars: {
+                    show: true,
+                    barWidth: 0.6,
+                    lineWidth: 0,
+                    fillColor: { colors: [
+                        { opacity: 0.3 },
+                        { opacity: 0.8}
+                    ] }
+                }
+            }
+        ];
+
+        var options = {
+            colors: ['#e05d6f', '#61c8b8'],
+            series: {
+                shadowSize: 0
+            },
+            legend: {
+                backgroundOpacity: 0,
+                margin: -7,
+                position: 'ne',
+                noColumns: 2
+            },
+            xaxis: {
+                tickLength: 0,
+                font: {
+                    color: '#fff'
+                },
+                position: 'bottom',
+                ticks: [
+                    [ 1, 'JAN' ],
+                    [ 2, 'FEB' ],
+                    [ 3, 'MAR' ],
+                    [ 4, 'APR' ],
+                    [ 5, 'MAY' ],
+                    [ 6, 'JUN' ],
+                    [ 7, 'JUL' ],
+                    [ 8, 'AUG' ],
+                    [ 9, 'SEP' ],
+                    [ 10, 'OCT' ],
+                    [ 11, 'NOV' ],
+                    [ 12, 'DEC' ]
+                ]
+            },
+            yaxis: {
+                tickLength: 0,
+                font: {
+                    color: '#fff'
+                }
+            },
+            grid: {
+                borderWidth: {
+                    top: 0,
+                    right: 0,
+                    bottom: 1,
+                    left: 1
+                },
+                borderColor: 'rgba(255,255,255,.3)',
+                margin: 0,
+                minBorderMargin: 0,
+                labelMargin: 20,
+                hoverable: true,
+                clickable: true,
+                mouseActiveRadius: 6
+            },
+            tooltip: true,
+            tooltipOpts: {
+                content: '%s: %y',
+                defaultTheme: false,
+                shifts: {
+                    x: 0,
+                    y: 20
+                }
+            }
+        };
+
+        var plot = $.plot($("#statistics-chart"), data, options);
+
+        $(window).resize(function () {
+            // redraw the graph in the correctly sized div
+            plot.resize();
+            plot.setupGrid();
+            plot.draw();
+        });
+        // * Initialize Statistics chart
+
+        //Initialize morris chart
+        Morris.Donut({
+            element: 'browser-usage',
+            data: [
+                {label: 'Chrome', value: 25, color: '#00a3d8'},
+                {label: 'Safari', value: 20, color: '#2fbbe8'},
+                {label: 'Firefox', value: 15, color: '#72cae7'},
+                {label: 'Opera', value: 5, color: '#d9544f'},
+                {label: 'Internet Explorer', value: 10, color: '#ffc100'},
+                {label: 'Other', value: 25, color: '#1693A5'}
+            ],
+            resize: true
+        });
+        //*Initialize morris chart
+
+
+        // Initialize owl carousels
+        $('#todo-carousel, #feed-carousel, #notes-carousel').owlCarousel({
+            autoPlay: 5000,
+            stopOnHover: true,
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+            responsive: true
+        });
+
+        $('#appointments-carousel').owlCarousel({
+            autoPlay: 5000,
+            stopOnHover: true,
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            navigation: true,
+            navigationText: ['<i class=\'fa fa-chevron-left\'></i>', '<i class=\'fa fa-chevron-right\'></i>'],
+            singleItem: true
+        });
+        //* Initialize owl carousels
+
+
+        // Initialize rickshaw chart
+        var graph;
+
+        var seriesData = [
+            [],
+            []
+        ];
+        var random = new Rickshaw.Fixtures.RandomData(50);
+
+        for (var i = 0; i < 50; i++) {
+            random.addData(seriesData);
+        }
+
+        graph = new Rickshaw.Graph({
+            element: document.querySelector("#realtime-rickshaw"),
+            renderer: 'area',
+            height: 133,
+            series: [
+                {
+                    name: 'Series 1',
+                    color: 'steelblue',
+                    data: seriesData[0]
+                },
+                {
+                    name: 'Series 2',
+                    color: 'lightblue',
+                    data: seriesData[1]
+                }
+            ]
+        });
+
+        var hoverDetail = new Rickshaw.Graph.HoverDetail({
+            graph: graph,
+        });
+
+        graph.render();
+
+        setInterval(function () {
+            random.removeData(seriesData);
+            random.addData(seriesData);
+            graph.update();
+
+        }, 1000);
+        //* Initialize rickshaw chart
+
+        //Initialize mini calendar datepicker
+        $('#mini-calendar').datetimepicker({
+            inline: true
+        });
+        //*Initialize mini calendar datepicker
+
+
+        //todo's
+        $('.widget-todo .todo-list li .checkbox').on('change', function () {
+            var todo = $(this).parents('li');
+
+            if (todo.hasClass('completed')) {
+                todo.removeClass('completed');
+            } else {
+                todo.addClass('completed');
+            }
+        });
+        //* todo's
+
+
+        //initialize datatable
+        $('#project-progress').DataTable({
+            "aoColumnDefs": [
+                { 'bSortable': false, 'aTargets': [ "no-sort" ] }
+            ],
+        });
+        //*initialize datatable
+
+        //load wysiwyg editor
+        $('#summernote').summernote({
+            toolbar: [
+                //['style', ['style']], // no style button
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']],
+                //['insert', ['picture', 'link']], // no insert buttons
+                //['table', ['table']], // no table button
+                //['help', ['help']] //no help button
+            ],
+            height: 143   //set editable area's height
+        });
+        //*load wysiwyg editor
+    });
+    </script>
+    <!--/ Page Specific Scripts -->
+{% endblock js-script %}

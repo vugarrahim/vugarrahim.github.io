@@ -1,0 +1,30 @@
+// Social list
+.social-list{
+
+  li{
+    display: inline-block;
+    padding-left: 19px;
+    padding-right: 27px;
+
+    @include breakpoint(visible-md){
+      @include padd-leftNright(14px);
+    }
+    @include breakpoint(visible-sm){
+      @include padd-leftNright(4px);
+    }
+    @include breakpoint(visible-xs){
+      @include padd-leftNright(10px);
+    }
+
+    .social-box{
+
+      .pico{
+        margin-bottom: 5px;
+      }
+      p{
+        font-size: 12px;
+        color: $el-black;
+      }
+    }
+  }
+}

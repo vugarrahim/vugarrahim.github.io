@@ -1,0 +1,30 @@
+    server {
+        listen 1935;
+        chunk_size 8192;
+	      #server_name #{APP_SERVER};
+
+        application vod {
+            play #{APP_PATH}/capture;
+        }
+
+        application myvideo {
+          live on;
+
+          # default recorder
+          record all;
+          record_path #{APP_PATH}/capture;
+
+          # append current timestamp to each flv
+          # record_unique on;
+          record_interval 30s;
+          record_max_size 30M;
+
+          # publish only from localhost
+          #allow publish 127.0.0.1;
+          #deny publish all;
+
+          #allow play all;
+
+          #exec_record_done ffmpeg -i $path -c copy /var/videos/$basename.mp4;
+        }
+    }

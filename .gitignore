@@ -1,0 +1,15 @@
+.vagrant/
+*.pyc
+*.log
+.idea/
+.sass-cache
+.venv
+node_modules
+
+
+# static files
+port_app/static/admin
+port_app/static/djcelery
+port_app/static/modeltranslation
+port_app/static/front/node_modules
+port_app/static/front/.sass-cache

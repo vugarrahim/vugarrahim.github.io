@@ -1,0 +1,239 @@
+{% extends 'admin_port/layout.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block page-title %}  {% trans 'Booking Check Items' %} {% endblock page-title %}
+
+
+{% block content %}
+    <!-- ====================================================
+        ================= CONTENT ===============================
+        ===================================================== -->
+<section id="content">
+
+    <div class="page page-dashboard">
+
+        <div class="pageheader">
+
+            <h2>{% trans 'Admin' %} <span>{% trans '// Manage system' %}</span></h2>
+
+            <div class="page-bar">
+
+                <ul class="page-breadcrumb">
+                    <li>
+                        <a href="#"><i class="fa fa-home"></i> {% trans 'Port of Baku' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% trans 'Admin' %}</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- cards row -->
+        <div class="row">
+
+            <!-- col -->
+            <div class="card-container col-sm-12">
+
+                <section class="tile">
+
+                    <!-- tile header -->
+                    <div class="tile-header dvd dvd-btm">
+                        <h1 class="custom-font"><strong>{% trans 'Check In' %} </strong></h1>
+                        <ul class="controls">
+                            <li class="remove"><a role="button" tabindex="0" class="tile-close"><i class="fa fa-times"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /tile header -->
+
+
+                    <!-- tile body -->
+                    <div class="tile-body">
+
+                        <div class="row">
+
+                            <div class="col-sm-10 col-sm-offset-1">
+
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+
+                                            <div class="bg-greensea clearfix mb-20">
+                                                {% if booking.owner.get_full_name %}
+                                                    <h4 class="custom-font filled" rel="{{ booking.pk }}"><strong>{% trans 'Name: ' %} </strong>{{ booking.owner.get_full_name }}</h4>
+                                                {% endif %}
+                                                <h6 class="custom-font filled"><strong>{% trans 'Booking ID: ' %} </strong>{{ booking.booking_id  }}</h6>
+                                                <h6 class="custom-font filled"><strong>{% trans 'Status: ' %} </strong>{{ booking.done }}</h6>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="bookingTableId" class="mt-20">
+
+                                            <div class="table-responsive section">
+                                                <table class="table mb-0" id="usersList">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>{% trans 'Schedule' %}</th>
+                                                        <th>{% trans 'Direction (port > port)' %}</th>
+                                                        <th>{% trans 'Direction (terminal > terminal)' %}</th>
+                                                        <th>{% trans 'Booking type' %}</th>
+                                                        <th>{% trans 'Status' %}</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    {% for book in bookings %}
+                                                        <tr >
+                                                            <td >{{ book.booking.vessel_schedule }}</td>
+                                                            <td >{{ book.booking.vessel_schedule.direction.from_d.port }} --> {{ book.booking.vessel_schedule.direction.to.port }}</td>
+                                                            <td >{{ book.booking.vessel_schedule.direction }}</td>
+                                                            {% if book.booking.type == '2' %}
+                                                                <td><span class="label bg-success"> Return </span> </td>
+                                                            {% elif book.booking.type == '1' %}
+                                                                <td><span class="label bg-orange"> Away </span> </td>
+                                                            {% endif %}
+
+                                                            {% if book.done %}
+                                                                <td><span class="label bg-greensea"> {{ book.booking.done }} </span> </td>
+                                                            {% else %}
+                                                                <td><span class="label bg-red"> {{ book.booking.done }} </span> </td>
+                                                            {% endif %}
+                                                        </tr>
+                                                        <tr class="trClass">
+                                                            <td></td>
+                                                            <td colspan="4">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>{% trans 'Ticket ID' %}</th>
+                                                                            <th>{% trans 'Is Done' %}</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    {% for item in book.items %}
+                                                                        <tr class="itemInnerInfo" rel="{{ item.class_name }}">
+                                                                            <td class="bookingId">{{ item.ticket_id }}</td>
+                                                                            <td>
+                                                                                <label class="checkbox checkbox-custom-alt checkbox-custom-sm m-0">
+                                                                                    {% if item.is_arrived %}
+                                                                                        <input type="checkbox" class="selectMe" checked><i></i>
+                                                                                    {% else %}
+                                                                                        <input type="checkbox" class="selectMe" ><i></i>
+                                                                                    {% endif %}
+                                                                                </label>
+                                                                            </td>
+                                                                        </tr>
+                                                                    {% endfor %}
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                    </div>
+
+                                    <div class="text-right mt-20">
+                                        <button type="submit" id="bookingIdSubmit" class="btn btn-greensea">{% trans 'Submit' %}</button>
+                                        <a href="{% url 'booking:booking-check-list' %}" class="btn btn-danger">{% trans 'Back' %}</a>
+                                    </div>
+
+                            </div>
+                            <!-- /.col-sm-12 -->
+
+                        </div>
+                        <!-- /.row -->
+
+                    </div>
+                    <!-- /tile body -->
+
+                </section>
+
+            </div>
+            <!-- /col -->
+
+        </div>
+        <!-- /row -->
+
+
+
+    </div>
+
+
+</section>
+    <!--/ CONTENT -->
+{% endblock content %}
+
+
+
+
+{% block js-script %}
+
+<script>
+    $(window).load(function(){
+
+        var bookingID = [];
+
+        var bookingTableId = $('#bookingTableId').find('tbody .bookingId'),
+            bookingIdSubmit = $('#bookingIdSubmit');
+
+        bookingIdSubmit.on('click', function(e){
+            e.preventDefault();
+
+            bookingID = [];
+
+            for(var i = 0, iLen = bookingTableId.length; i < iLen; i++){
+
+                var bookingObj = {};
+
+                bookingID.push(
+                    {
+                        "class_name" : $(bookingTableId[i]).parent().attr('rel'),
+                        "ticket_id" : $(bookingTableId[i]).html(),
+                        "is_arrived" : $(bookingTableId[i]).parent().find('.selectMe').is(':checked')
+                    }
+                );
+            }
+
+            console.log('bookingID: ', bookingID);
+
+            var send_data = {};
+//            console.log('bookingID: ', bookingID);
+//            console.log('{ "items" : bookingID}: ', { "items" : bookingID});
+//            console.log('window: ', window.location.href);
+            send_data["items"] = bookingID;
+            console.log(send_data);
+            var send_url = window.location.href;
+
+            $.ajax({
+                method : "POST",
+                url : send_url,
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(send_data)
+            }).done(function(){
+
+                location.reload();
+            });
+
+        });
+
+        $('#select-all').change(function() {
+            if ($(this).is(":checked")) {
+                $('#usersList .selectMe').prop('checked', true);
+            } else {
+                $('#usersList .selectMe').prop('checked', false);
+            }
+        });
+
+    });
+</script>
+<!--/ Page Specific Scripts -->
+
+    <!--/ Page Specific Scripts -->
+{% endblock js-script %}

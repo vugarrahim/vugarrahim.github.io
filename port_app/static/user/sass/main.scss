@@ -1,0 +1,250 @@
+// import google fonts
+@import url(http://fonts.googleapis.com/css?family=Dosis:300,700|Ubuntu+Mono|Lato:300,400,700,300italic,400italic&subset=latin,latin-ext);
+
+/**************
+ Bourbon
+ **************/
+// bourbon plugin
+@import 'bourbon/bourbon.scss';
+@import 'bourbon/bourbon-deprecated-upcoming.scss';
+@import 'bourbon/addons/border-radius';
+@import 'bourbon/addons/border-style';
+@import 'bourbon/addons/border-color';
+@import 'bourbon/addons/border-width';
+@import 'bourbon/addons/buttons';
+@import 'bourbon/addons/clearfix';
+@import 'bourbon/addons/ellipsis';
+@import 'bourbon/addons/font-stacks';
+@import 'bourbon/addons/hide-text';
+@import 'bourbon/addons/margin';
+@import 'bourbon/addons/padding';
+@import 'bourbon/addons/position';
+@import 'bourbon/addons/prefixer';
+@import 'bourbon/addons/retina-image';
+@import 'bourbon/addons/size';
+@import 'bourbon/addons/text-inputs';
+@import 'bourbon/addons/timing-functions';
+@import 'bourbon/addons/triangle';
+@import 'bourbon/addons/word-wrap';
+
+// Css3
+@import 'bourbon/css3/animation';
+@import 'bourbon/css3/appearance';
+@import 'bourbon/css3/backface-visibility';
+@import 'bourbon/css3/background';
+@import 'bourbon/css3/background-image';
+@import 'bourbon/css3/border-image';
+@import 'bourbon/css3/calc';
+@import 'bourbon/css3/columns';
+@import 'bourbon/css3/filter';
+@import 'bourbon/css3/flex-box';
+@import 'bourbon/css3/font-face';
+@import 'bourbon/css3/font-feature-settings';
+@import 'bourbon/css3/hidpi-media-query';
+@import 'bourbon/css3/hyphens';
+@import 'bourbon/css3/image-rendering';
+@import 'bourbon/css3/keyframes';
+@import 'bourbon/css3/linear-gradient';
+@import 'bourbon/css3/perspective';
+@import 'bourbon/css3/placeholder';
+@import 'bourbon/css3/radial-gradient';
+@import 'bourbon/css3/selection';
+@import 'bourbon/css3/text-decoration';
+@import 'bourbon/css3/transition';
+@import 'bourbon/css3/transform';
+@import 'bourbon/css3/user-select';
+
+// function
+@import 'bourbon/functions/assign-inputs';
+@import 'bourbon/functions/contains';
+@import 'bourbon/functions/contains-falsy';
+@import 'bourbon/functions/is-length';
+@import 'bourbon/functions/is-light';
+@import 'bourbon/functions/is-number';
+@import 'bourbon/functions/is-size';
+@import 'bourbon/functions/modular-scale';
+@import 'bourbon/functions/px-to-em';
+@import 'bourbon/functions/px-to-rem';
+@import 'bourbon/functions/shade';
+@import 'bourbon/functions/strip-units';
+@import 'bourbon/functions/tint';
+@import 'bourbon/functions/transition-property-name';
+@import 'bourbon/functions/unpack';
+
+// helpers
+@import 'bourbon/helpers/convert-units';
+@import 'bourbon/helpers/directional-values';
+@import 'bourbon/helpers/font-source-declaration';
+@import 'bourbon/helpers/gradient-positions-parser';
+@import 'bourbon/helpers/linear-angle-parser';
+@import 'bourbon/helpers/linear-gradient-parser';
+@import 'bourbon/helpers/linear-positions-parser';
+@import 'bourbon/helpers/linear-side-corner-parser';
+@import 'bourbon/helpers/radial-arg-parser';
+@import 'bourbon/helpers/radial-gradient-parser';
+@import 'bourbon/helpers/radial-positions-parser';
+@import 'bourbon/helpers/render-gradients';
+@import 'bourbon/helpers/shape-size-stripper';
+@import 'bourbon/helpers/str-to-num';
+
+// helpers
+@import 'bourbon/settings/asset-pipeline';
+@import 'bourbon/settings/prefixer';
+@import 'bourbon/settings/px-to-em';
+
+
+/**************
+ Inc
+ **************/
+// My variables, mixins and colors
+// inc
+@import "inc/mixins"; // main mixins
+@import "inc/colors"; // colors variables
+@import "inc/variables"; // other variables
+
+
+/**************
+ Pages
+ **************/
+//Pages
+@import "pages/global"; // global page settings
+@import "pages/tree"; // file tree settings
+@import "pages/chat"; // chat page settings
+@import "pages/mail"; // mail page settings
+@import "pages/search_results"; // search results page settings
+
+
+/**************
+ Layouts
+ **************/
+//Layouts
+@import "layouts/boxed"; // boxed layout
+@import "layouts/hz-menu"; // horizontal menu
+@import "layouts/rtl"; // rtl layout
+
+
+/**************
+ Sections
+ **************/
+// Sections
+@import "sections/content"; // content section
+@import "sections/header"; // header section
+@import "sections/nav"; // navigation section
+@import "sections/nav-min"; // navigation sm/xs
+@import "sections/page-header"; // page header section
+@import "sections/rightbar"; // rightbar section
+@import "sections/page-loader"; // page loader
+@import "sections/add-nav"; // additional navbar under breadcrumbs
+
+
+/**************
+ Components
+ **************/
+// Components
+@import "components/tiles"; // tiles
+@import "components/form-elements"; // form elements
+@import "components/ui-elements"; // ui elements
+@import "components/dropdowns"; // dropdowns
+@import "components/charts"; // charts
+@import "components/buttons"; // buttons
+@import "components/icons";  // icons
+@import "components/lists"; // lists
+@import "components/media"; // media
+@import "components/thumbnails"; // thumbnails
+@import "components/typography"; // typography
+@import "components/loading-bar"; // loading bar
+@import "components/daterangepicker"; // daterangepicker
+@import "components/alerts-notifications"; // alerts and notifications
+@import "components/tabs-pills"; // tabs and pills
+@import "components/modals"; // modals
+@import "components/portlets"; // portlets
+@import "components/progress"; // progress bars
+@import "components/tbox"; // table layout
+@import "components/tree"; // file tree
+@import "components/chosen"; // chosen plugin
+@import "components/tables"; // tables
+@import "components/cards"; // two sided cards
+@import "components/carousel"; // carousel
+@import "components/widgets"; // widgets
+@import "components/streamline"; // streamline
+@import "components/maps"; // maps
+@import "components/calendar"; // calendar
+@import "components/gallery"; // gallery
+
+
+/**************
+ Shared
+ **************/
+// Shared
+@import "shared/global"; // global shared settings
+@import "shared/color-schemes"; // color schemes
+@import "shared/print"; // print css
+@import "shared/animations"; // animations
+
+
+
+
+
+.np-l{
+  padding-left: 0 !important;
+}
+
+.nm{
+  margin: 0 !important;
+}
+
+
+// Ship icon
+.ship-icon{
+  display: inline-block;
+  width: 16px;
+  background-image: url("../../images/vessel/ship.svg");
+}
+
+.infoBox
+{
+  position: relative;
+
+  p{
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  &:before{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin-bottom: -8px;
+    bottom: 100%;
+    right: 50%;
+    margin-right: -6px;
+    border-color: transparent transparent #ffffff transparent;
+    border-style:solid;
+    border-width: 10px;
+  }
+}
+
+.card-container {
+
+  .card {
+    @include transform(none);
+    @include transition(none);
+
+    &:hover, &:focus, &:visited, &:active{
+      @include transform(none);
+      @include transition(none);
+    }
+
+    .front{
+      @include transform(none);
+      @include transition(none);
+
+      &:hover, &:focus, &:visited, &:active{
+        @include transform(none);
+        @include transition(none);
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// back-contents
+.back-contents{
+  padding: 0 !important;
+  position: relative;
+  border: none !important;
+  border-radius: 0 !important;
+
+  .content-more-btn{
+    padding: 7px 17px;
+    line-height: 1em;
+    background-color: $el-green;
+    display: inline-block;
+    @include abs-pos(144px, 0, auto, auto);
+    color: #FFFFFF;
+    font-size: 12px;
+
+    @include breakpoint(visible-md){
+      top: 100px;
+    }
+    @include breakpoint(visible-sm){
+      top: 70px;
+    }
+    @include breakpoint(visible-xs){
+      top: 100px;
+    }
+  }
+
+  .caption{
+    padding: 9px 14px !important;
+
+    h3{
+      margin-top: 6px;
+      letter-spacing: 1.4px;
+    }
+    p{
+      letter-spacing: .4px;
+      line-height: 17px;
+      margin-bottom: 19px;
+    }
+  }
+}

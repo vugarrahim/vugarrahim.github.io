@@ -1,0 +1,92 @@
+[
+ {
+        "model": "booking.vesselpassengercapacity",
+        "pk": 1,
+        "fields": {
+            "vessel": 2,
+            "passenger_transport_type": 3,
+            "count": 30
+        }
+    },
+    {
+        "model": "booking.vesselpassengercapacity",
+        "pk": 2,
+        "fields": {
+            "vessel": 2,
+            "passenger_transport_type": 5,
+            "count": 1
+        }
+    },
+    {
+        "model": "booking.vesselpassengercapacity",
+        "pk": 3,
+        "fields": {
+            "vessel": 3,
+            "passenger_transport_type": 3,
+            "count": 30
+        }
+    },
+    {
+        "model": "booking.vesselpassengercapacity",
+        "pk": 4,
+        "fields": {
+            "vessel": 3,
+            "passenger_transport_type": 5,
+            "count": 1
+        }
+    },
+    {
+        "model": "booking.vesselpassengercapacity",
+        "pk": 5,
+        "fields": {
+            "vessel": 4,
+            "passenger_transport_type": 1,
+            "count": 2
+        }
+    },
+    {
+        "model": "booking.vesselpassengercapacity",
+        "pk": 6,
+        "fields": {
+            "vessel": 4,
+            "passenger_transport_type": 2,
+            "count": 2
+        }
+    },
+    {
+        "model": "booking.vesselpassengercapacity",
+        "pk": 7,
+        "fields": {
+            "vessel": 4,
+            "passenger_transport_type": 3,
+            "count": 3
+        }
+    },
+    {
+        "model": "booking.vesselpassengercapacity",
+        "pk": 8,
+        "fields": {
+            "vessel": 1,
+            "passenger_transport_type": 1,
+            "count": 2
+        }
+    },
+    {
+        "model": "booking.vesselpassengercapacity",
+        "pk": 9,
+        "fields": {
+            "vessel": 1,
+            "passenger_transport_type": 2,
+            "count": 2
+        }
+    },
+    {
+        "model": "booking.vesselpassengercapacity",
+        "pk": 10,
+        "fields": {
+            "vessel": 1,
+            "passenger_transport_type": 3,
+            "count": 3
+        }
+    }
+]

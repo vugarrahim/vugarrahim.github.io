@@ -1,0 +1,50 @@
+[
+    {
+        "model": "auth.group",
+        "pk": 1,
+        "fields": {
+            "name": "supervisor",
+            "permissions": [51, 55, 46, 50, 1, 7, 4, 129, 133, 106, 109, 117, 121, 110, 114, 123, 127, 85, 89, 67, 71, 90, 94, 57, 61, 72, 62, 66, 141, 145, 135, 139, 75, 79, 95, 99, 103, 100, 80, 84, 147, 10, 31, 28, 37, 34, 22, 25, 43, 40, 19, 13, 16]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 2,
+        "fields": {
+            "name": "user",
+            "permissions": []
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 3,
+        "fields": {
+            "name": "agent",
+            "permissions": []
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 4,
+        "fields": {
+            "name": "cashier",
+            "permissions": [109, 110, 114]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 5,
+        "fields": {
+            "name": "accountant",
+            "permissions": [129, 133, 130, 131, 135, 136, 137, 139]
+        }
+    },
+    {
+        "model": "auth.group",
+        "pk": 6,
+        "fields": {
+            "name": "scheduler",
+            "permissions": [80, 81, 84]
+        }
+    }
+]

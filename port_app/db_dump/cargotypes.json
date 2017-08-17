@@ -1,0 +1,62 @@
+[
+ {
+        "model": "booking.cargotype",
+        "pk": 1,
+        "fields": {
+            "name": "T.I.R. < 16.5 m",
+            "name_az": "T.I.R. < 16.5 m",
+            "name_en": "T.I.R. < 16.5 m",
+            "name_ru": "T.I.R. < 16.5 m",
+            "length": 16.5,
+            "height": 0.0
+        }
+    },
+    {
+        "model": "booking.cargotype",
+        "pk": 2,
+        "fields": {
+            "name": "Trailer < 13.5 m",
+            "name_az": "Trailer < 13.5 m",
+            "name_en": "Trailer < 13.5 m",
+            "name_ru": "Trailer < 13.5 m",
+            "length": 13.5,
+            "height": 0.0
+        }
+    },
+    {
+        "model": "booking.cargotype",
+        "pk": 3,
+        "fields": {
+            "name": "Truck < 8 m",
+            "name_az": "Truck < 8 m",
+            "name_en": "Truck < 8 m",
+            "name_ru": "Truck < 8 m",
+            "length": 8.0,
+            "height": 0.0
+        }
+    },
+    {
+        "model": "booking.cargotype",
+        "pk": 4,
+        "fields": {
+            "name": "Bus < 8 m",
+            "name_az": "Bus < 8 m",
+            "name_en": "Bus < 8 m",
+            "name_ru": "Bus < 8 m",
+            "length": 8.0,
+            "height": 0.0
+        }
+    },
+    {
+        "model": "booking.cargotype",
+        "pk": 5,
+        "fields": {
+            "name": "Car < 4.5 m",
+            "name_az": "Car < 4.5 m",
+            "name_en": "Car < 4.5 m",
+            "name_ru": "Car < 4.5 m",
+            "length": 4.5,
+            "height": 0.0
+        }
+    }
+]

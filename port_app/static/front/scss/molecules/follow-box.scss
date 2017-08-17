@@ -1,0 +1,102 @@
+// follow box
+.follow-box{
+  background-color: $el-white;
+  padding: 17px 15px;
+
+  .follow-title{
+    font-size: 24px;
+    letter-spacing: .7px;
+    margin-top: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-weight: lighter;
+  }
+  hr{
+    margin-top: 1px;
+    margin-bottom: 15px;
+  }
+  .follow-desc{
+    letter-spacing: .4px;
+  }
+  .form-group{
+
+    @include breakpoint(visible-md){
+      width: 60%;
+    }
+    @include breakpoint(visible-sm){
+      width: 100%;
+    }
+    @include breakpoint(visible-xs){
+      width: 100%;
+    }
+  }
+  .follow-input{
+    width: 220px !important;
+    margin-top: 2px;
+    border-radius: 1px;
+    padding: 9px;
+
+    @include breakpoint(visible-md){
+      width: 100% !important;
+    }
+
+    @include breakpoint(visible-sm){
+      width: 100% !important;
+    }
+
+    @include breakpoint(visible-xs){
+      width: 100% !important;
+    }
+
+    &::-moz-placeholder{
+      font-style: italic;
+    }
+    &:-ms-input-placeholder{
+      font-style: italic;
+    }
+    &::-webkit-input-placeholder{
+      font-style: italic;
+    }
+    &:-moz-placeholder{
+      font-style: italic;
+    }
+  }
+  .follow-btn{
+    margin-left: 6px;
+    @include button-variant(#ffffff, #2885c3, #2885c3);
+    padding: 7px 18px;
+    margin-top: 3px;
+    text-transform: uppercase;
+
+    @include breakpoint(visible-md){
+      width: 34%;
+      margin-left: 2%;
+      margin-top: 0px;
+    }
+    @include breakpoint(visible-sm){
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    @include breakpoint(visible-xs){
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  .social-list{
+    margin-top: 69px;
+    margin-bottom: 25px;
+
+    @include breakpoint(visible-md){
+      margin-top: 37px;
+      margin-bottom: 25px;
+    }
+
+    @include breakpoint(visible-sm){
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+  }
+
+}

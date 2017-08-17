@@ -1,0 +1,265 @@
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% load i18n %}
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="ru"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="ru"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="ru"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="ru"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block page-title %}{% endblock page-title%}</title>
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="tags for website">
+    <meta name="description" content="Project description goes here">
+
+
+    {% block vendor-css %}{% endblock vendor-css %}
+
+    {% block css %}
+    <!-- CSS -->
+    <link href="{% static 'front/css/design.css' %}" rel="stylesheet">
+    {% endblock css %}
+    {% block page-style %}{% endblock page-style %}
+
+
+    {% block vendor-js %}
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{% static 'front/js/build/jquery-1.11.0.min.js' %}"><\/script>')</script>
+
+        <!-- Jquery UI datepicker -->
+        <script defer src="{% static 'front/js/build/jquery-ui.min.js' %}"></script>
+    {% endblock vendor-js %}
+
+    {% block js %}
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script defer src="{% static 'front/js/build/script.min.js' %}"></script>
+    {% endblock js %}
+
+
+    {% block page-js %}{% endblock page-js %}
+
+
+    {% block ie-js %}<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->{% endblock ie-js %}
+</head>
+
+
+
+<body>
+<div class="wrapper">
+
+    {% block header %}
+        <header>
+            <div class="header-top-side hidden-xs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-4">
+                            <a href="{% url 'home' %}" class="logo-box pull-left">
+                                <img src="{% static 'front/img/logo.png' %}" alt="{% trans 'Elet logo' %}" class="img-responsive-inline"/>
+                            </a>
+                            <!-- /.logo-box -->
+                            <div class="slogan visible-lg-inline-block"></div>
+                        </div>
+                        <!-- /.col-lg-5 -->
+                        {% block userarea %}
+                        <div class="col-lg-7 col-md-8">
+                            <ul class="header-social-list list-unstyled clearfix">
+                                <li>
+                                    <a href="#AZ" target="_blank" class="social-box text-none"> AZ </a>
+                                </li>
+                                <li>
+                                    <a href="#RU" target="_blank" class="social-box text-none"> RU </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#EN" target="_blank" class="social-box text-none"> EN </a>
+                                </li>
+                            </ul>
+                            <!-- /.regi-list -->
+                            {% url 'accounts:user-login' as user_login %}
+                            {% if not request.user.is_authenticated and not request.path == user_login %}
+                                <ul class="login-list list-unstyled clearfix">
+                                    <li>
+                                        <form class="form-inline"  method="post" action="{% url 'accounts:user-login' %}">{% csrf_token%}
+                                            {% for field in login_form.visible_fields %}
+                                                <div class="form-group{% if field.errors %} has-error{% endif %}">
+                                                        {% if field.errors %} <div class="alert alert-danger" role="alert">{{ field.errors }}</div> {% endif %}
+                                                        <label class="font-pg"{% if field.errors %}
+                                                              data-toggle="tooltip" title="{% for error in field.errors %}{{ error|escape }}{% endfor %}"{% endif %}
+                                                              for="{{ field.id_for_label }}"></label>
+                                                        {{ field|add_class:'form-control input-sm' }}
+                                                        {{ field.placeholder }}
+                                                        {% if field.help_text %}<span class="help-block">{{ field.help_text }}</span>{% endif %}
+                                                </div>
+                                            {% endfor %}
+                                            <button type="submit" class="btn btn-primary btn-sm">{% trans 'Log in' %}</button>
+                                    </li>
+                                    <li><a href="{% url 'accounts:user-registration' %}">{% trans 'Register now' %}</a></li>
+                                </ul>
+                                <!-- /.login-list -->
+                                <ul class="links-list list-unstyled clearfix">
+                                    <li><a href="{% url 'accounts:user-password-reset' %}">{% trans 'Forgotten PIN/Password?' %}</a></li>
+                                </ul>
+                            {% elif request.path != user_login %}
+                                <p class="login-important text-right">
+                                    <span>{{ request.user.get_full_name }}</span>
+                                    <a href="{% url 'booking:user-overview' %}">{% trans 'My account' %}</a>
+                                    <a href="{% url 'accounts:user-logout' %}">{% trans 'Log out' %}</a>
+                                </p>
+                            {% endif %}
+                            <!-- /.links-list -->
+                        </div>
+                        <!-- /.col-lg-7 -->
+                        {% endblock userarea %}
+
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.header-top-side -->
+            {% block head-nav %}
+            <nav class="navbar elet-navbar">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header visible-xs-block">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerSide" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="{% static 'front/img/logo-white.png' %}" alt="{% trans 'Elet logo' %}" class="img-responsive-inline"/>
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="headerSide">
+                        <ul class="nav navbar-nav menu-navbar text-uppercase">
+                            <li class="active"><a href="{% url 'home' %}">{% trans 'Booking' %}</a></li>
+                            <li><a href="http://portofbaku.com/en/about-port-of-baku/" target="_blank">{% trans 'About Port' %}</a></li>
+                            <li><a href="http://portofbaku.com/en/BusinessandServices/" target="_blank">{% trans 'Business & Services' %}</a></li>
+                            <li><a href="http://portofbaku.com/en/contacts/" target="_blank">{% trans 'Contacts' %}</a></li>
+                            <li class="dropdown visible-xs-block">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans 'Log in' %} <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <form class="mobile-login">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="{% trans 'Login ID' %}">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="{% trans 'PIN/Password' %}">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <button type="submit" class="btn btn-primary">{% trans 'Log in' %}</button>
+                                            </div>
+                                            <!-- /.col-xs-4 -->
+                                            <div class="col-xs-8"><a href="#" class="pull-right">{% trans 'Forgotten PIN/Password?' %}</a></div>
+                                            <!-- /.col-xs-8 -->
+                                            <div class="col-xs-12"><a href="#" class="register-link text-center">{% trans 'Register now' %}</a></div>
+                                            <!-- /.col-xs-12 -->
+                                        </div>
+                                        <!-- /.row -->
+                                    </form>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+            {% endblock head-nav %}
+        </header>
+        <!-- /header -->
+    {% endblock header %}
+
+    {% block content %}{% endblock content %}
+
+    {% block footer %}
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6 col-sm-7 col-xs-12">
+                        <p class="copyright-text">{% trans 'PORT OF BAKU © 2015' %}</p>
+                        <ul class="footer-menu-list list-unstyled">
+                            <li>
+                                <a href="https://portofbaku.com/en/contacts/" class="footer-menu-links" target="_blank">{% trans 'CONTACTS' %}</a>
+                            </li>
+                            <li>
+                                <a href="https://portofbaku.com/en/about/" class="footer-menu-links" target="_blank">{% trans 'ABOUT US' %}</a>
+                            </li>
+                            <li>
+                                <a href="https://portofbaku.com/en/news/" class="footer-menu-links" target="_blank">{% trans 'NEWS & PUBLICATIONS' %}</a>
+                            </li>
+                        </ul>
+                        <!-- /.footer-menu-list -->
+                    </div>
+                    <!-- /.col-lg-7 -->
+                    <div class="col-lg-3 col-md-4 col-sm-3 col-xs-12">
+                        <ul class="footer-social-list list-unstyled">
+                            <li>
+                                <a href="#" class="fs-box">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fs-box">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fs-box">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fs-box">
+                                    <img src="{% static 'front/content/virtual_karabakh.png' %}" alt="{% trans 'Virtual Karabakh' %}" class="img-responsive-inline"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.col-lg-3 -->
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                        <div class="text-right">
+                            <a href="#" class="footer-logo-box hidden-xs">
+                                <img src="{% static 'front/img/logo-white.png' %}" alt="{% trans 'White logo' %}" class="img-responsive-inline"/>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-3 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </footer>
+        <!-- /footer -->
+    {% endblock footer %}
+
+</div>
+<!-- /.wrapper -->
+
+{% block modal-zone %}{% endblock modal-zone %}
+
+{% block analytics %}
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+       ga('create', 'UA-71107863-1');
+       ga('send', 'pageview');
+    </script>
+{% endblock analytics %}
+</body>
+</html>

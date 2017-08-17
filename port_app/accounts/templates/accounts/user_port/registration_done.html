@@ -1,0 +1,25 @@
+{% extends 'user_port/main.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+    {% block page-title %}   {% trans 'Registration completed - Port of Baku' %} {% endblock page-title %}
+
+
+{% block content %}
+
+
+<div class="page page-core page-login">
+
+    <div class="text-center">{% trans 'Port of Baku' %}</div>
+
+    <div class="container w-420 p-15 bg-white mt-40">
+
+        <p class="text-light text-greensea"></p>
+        <p class="text-light mt-10">{% trans 'Log in to your account' %} <a href="{% url 'accounts:user-login' %}">{% trans 'login' %}</a></p>
+
+    </div>
+
+</div>
+
+
+{% endblock content %}

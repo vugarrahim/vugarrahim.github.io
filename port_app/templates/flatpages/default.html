@@ -1,0 +1,17 @@
+{% extends 'user/base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% block page-title %}  {{ flatpage.title }} {% endblock page-title %}
+{% block layout %}
+
+
+<div class="page page-core page-login">
+
+    <div class="container w-420 p-15 bg-white mt-40">
+            {{ flatpage.content }}
+    </div>
+
+</div>
+
+
+{% endblock layout %}

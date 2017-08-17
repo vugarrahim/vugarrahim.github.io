@@ -1,0 +1,131 @@
+{% extends 'user_port/main.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks get_dict_obj %}
+{% block page-title %} {% trans 'Booking Select Ship - Port of Baku' %} {% endblock page-title %}
+
+
+{% block content %}
+
+<!-- ====================================================
+================= CONTENT ===============================
+===================================================== -->
+<section class="nav-section">
+        <div class="container">
+
+
+            <div class="nav-content-side">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <form method="post" class="booking-step-2">{% csrf_token %}
+                            {{ formset.management_form }}
+
+                            {% for form in formset %}
+                                {% with form_prices=info.prices|dict_obj:forloop.counter0  %}
+                                {{ form.non_field_errors }}
+
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="nav-content-box">
+                                            <div class="table-responsive">
+                                                <table class="table table-schedule table-hover">
+                                                    <colgroup>
+                                                        <col width="5%"/>
+                                                    </colgroup>
+                                                    <caption class="clearfix">
+                                                        {% if forloop.counter0 == 0 %}
+                                                            <h4 class="pull-left"><i class="fa fa-ship"></i> {{ info.direction_to.from_d }} - {{ info.direction_to.to }}</h4>
+                                                            <time class="pull-right">{{ info.booking_departure|date:"j F, Y" }}</time>
+                                                        {% elif forloop.counter0 == 1 %}
+                                                            <h4 class="pull-left"><i class="fa fa-ship"></i> {{ info.direction_to.to }} - {{ info.direction_to.from_d }}</h4>
+                                                            <time class="pull-right">{{ info.booking_return|date:"j F, Y" }}</time>
+                                                        {% endif %}
+                                                    </caption>
+                                                    <thead>
+                                                    <tr>
+                                                        <td colspan="2">{% trans 'Voyage' %}</td>
+                                                        <td>{% trans 'Date' %}</td>
+                                                        <td>{% trans 'Cargo' %}</td>
+                                                        <td>{% trans 'Passenger' %}</td>
+                                                        <td>{% trans 'Port fee' %}</td>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    {% if form.schedule.errors %}
+                                                        <tr>
+                                                        <td class="danger text-center text-danger" colspan="6">{% trans 'Select one of the options described below' %}</td>
+                                                        </tr>
+                                                    {% endif %}
+                                                    {% for radio in form.schedule %}
+                                                        {% with elm=form.schedule.field.queryset|dict_obj:forloop.counter0 elm_price=form_prices|dict_obj:forloop.counter0 %}
+                                                            <tr>
+
+                                                                <td>
+                                                                    <p class="checbox-box text-center">
+                                                                        {{ radio.tag }}
+                                                                    </p>
+                                                                    <!-- /.checbox-box -->
+                                                                </td>
+                                                                <td>
+                                                                    <p class="nav-tr-title">{{ elm.vessel }}</p>
+
+                                                                    <p class="nav-tr-code">{{ radio.choice_label }}</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="nav-tr-date"><i
+                                                                            class="fa fa-calendar-check-o"></i>
+                                                                        {{ elm.departure_date|date:"j F, Y" }}
+                                                                    </p>
+
+                                                                </td>
+                                                                <td class="small">
+                                                                    <p class="nav-tr-date"><span class="label label-default">{{ elm_price.cargo }} {% trans 'usd' %}</span></p>
+                                                                </td>
+                                                                <td class="small">
+                                                                    <p class="nav-tr-date"><span class="label label-default">{{ elm_price.passenger.min }} - {{ elm_price.passenger.max }}&nbsp;{% trans 'usd' %}</span></p>
+                                                                </td>
+                                                                <td class="small">
+                                                                    <p class="nav-tr-date"><span class="label label-default">{{ elm_price.port }} {% trans 'usd' %}</span></p>
+                                                                </td>
+                                                            </tr>
+                                                        {% endwith %}
+                                                    {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!-- /.nav-content-box -->
+                                    </div>
+                                    <!-- /.col-md-12 -->
+                                </div>
+                                <!-- /.row -->
+                                {% endwith %}
+                            {% endfor %}
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a class="btn btn-default btn-lg" href="{% url 'booking:user-booking' %}"><i
+                                            class="glyphicon glyphicon-chevron-left"></i> {% trans 'Back' %}</a>
+                                </div>
+                                <!-- /.col-md-6 -->
+                                <div class="col-md-6 text-right">
+                                    <button type="submit" class="btn btn-primary btn-lg"
+                                            data-loading-text="{% trans 'Loading...' %}">{% trans 'Continue' %} <i
+                                            class="glyphicon glyphicon-chevron-right"></i></button>
+                                </div>
+                                <!-- /.col-md-6 -->
+                            </div>
+                            <!-- /.row -->
+                        </form>
+                    </div>
+                    <!-- /.col-md-10 col-md-offset-1 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.nav-content-side -->
+
+        </div>
+        <!-- /.container -->
+    </section>
+{% endblock content %}

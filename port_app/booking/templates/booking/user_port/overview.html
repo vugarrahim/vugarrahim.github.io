@@ -1,0 +1,128 @@
+{% extends 'user_port/user_layout.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+    {% block page-title %}  {% trans 'Overview - Port of Baku' %} {% endblock page-title %}
+
+
+
+<!-- ====================================================
+================= CONTENT ===============================
+===================================================== -->
+{% block selected-menu-title %} Personal Information {% endblock %}
+{% block selected-menu-content%}
+<div class="col-md-9">
+    <h3 class="overview-title">{% trans 'Settings' %}</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="sub-overview-title">{% trans 'Personal Information' %} <a href="{% url 'accounts:profile-update' %}" class="font-small"><i class="fa fa-edit"></i></a></p>
+
+            <ul class="list-unstyled">
+                <li>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="category">{% trans 'First Name' %}</p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                        <div class="col-sm-6">
+                            <p class="category-title"> {{ request.user.first_name }} </p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                    </div>
+                    <!-- /.row -->
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="category">{% trans 'Last Name' %}</p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                        <div class="col-sm-6">
+                            <p class="category-title">{{ request.user.last_name }}</p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                    </div>
+                    <!-- /.row -->
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="category">{% trans 'Email' %}</p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                        <div class="col-sm-6">
+                            <p class="category-title">{{ request.user.email }}</p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                    </div>
+                    <!-- /.row -->
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="category">{% trans 'Phone number' %}</p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                        <div class="col-sm-6">
+                            <p class="category-title">{{ request.user.telephone }}</p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                    </div>
+                    <!-- /.row -->
+                </li>
+            </ul>
+        </div>
+        <!-- /.col-md-6 -->
+        <div class="col-md-6">
+            <p class="sub-overview-title">{% trans 'Statistics' %}</p>
+
+            <ul class="list-unstyled">
+                <li>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="category"><i class="fa fa-ticket"></i> {% trans 'Booked' %}</p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                        <div class="col-sm-6">
+                            <p class="category-title">{{ booked}}</p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                    </div>
+                    <!-- /.row -->
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="category"><i class="fa fa-dollar"></i> {% trans 'Payed' %}</p>
+                        </div>
+                        <!-- /.col-sm-6 -->
+                        <div class="col-sm-6">
+                            {% if payed %}
+                                <p class="category-title">{{ payed }}</p>
+                            {% else %}
+                                <p class="category-title"> {% trans '0' %}</p>
+                            {% endif %}
+                        </div>
+                        <!-- /.col-sm-6 -->
+                    </div>
+                    <!-- /.row -->
+                </li>
+            </ul>
+        </div>
+        <!-- /.col-md-6 -->
+    </div>
+    <!--&lt;!&ndash; /.row &ndash;&gt;-->
+    <!--<p class="overview-description">-->
+        <!--Sign up now for our regular promotional emails packed with special offers and exclusive deals. You can personalise the offers you receive from us by selecting your favourite cities-->
+    <!--</p>-->
+    <!--<form>-->
+        <!--<div class="checkbox conditionBox">-->
+            <!--<label>-->
+                <!--<input type="checkbox"> Yes, I would like to receive Special Offers & Promotions from Agoda-->
+            <!--</label>-->
+        <!--</div>-->
+        <!--<button type="submit" class="btn blue-styled-btn">Update</button>-->
+    <!--</form>-->
+</div>
+{% endblock %}
+

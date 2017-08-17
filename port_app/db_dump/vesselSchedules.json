@@ -1,0 +1,1538 @@
+[
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 1,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-02-07T22:13:51Z",
+            "departure_date": "2016-03-08T22:13:52Z",
+            "schedule_id": "NG6062",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:13:57.937Z",
+            "updated_at": "2016-03-09T22:25:13.101Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 2,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-03-03T22:15:30Z",
+            "departure_date": "2016-03-04T22:15:36Z",
+            "schedule_id": "IE9634",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:15:49.414Z",
+            "updated_at": "2016-03-09T22:25:13.064Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 3,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-03-01T22:18:03Z",
+            "departure_date": "2016-03-02T22:18:15Z",
+            "schedule_id": "UJ1162",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:18:21.650Z",
+            "updated_at": "2016-03-09T22:25:13.027Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 4,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-03-01T22:19:27Z",
+            "departure_date": "2016-03-02T22:19:33Z",
+            "schedule_id": "TT5228",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:19:45.075Z",
+            "updated_at": "2016-03-09T22:25:12.989Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 5,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-03-03T22:19:58Z",
+            "departure_date": "2016-03-04T22:20:02Z",
+            "schedule_id": "NR8938",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:20:06.706Z",
+            "updated_at": "2016-03-09T22:25:12.953Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 6,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-03-01T22:21:14Z",
+            "departure_date": "2016-03-04T22:21:51Z",
+            "schedule_id": "UO6769",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:21:56.660Z",
+            "updated_at": "2016-03-09T22:25:12.916Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 7,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-03-05T22:22:09Z",
+            "departure_date": "2016-03-06T22:22:16Z",
+            "schedule_id": "DA1387",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:22:20.218Z",
+            "updated_at": "2016-03-09T22:25:12.879Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 8,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-02-28T22:24:22Z",
+            "departure_date": "2016-03-06T22:24:33Z",
+            "schedule_id": "KB5843",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:24:37.802Z",
+            "updated_at": "2016-03-09T22:25:12.841Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 9,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-03-07T22:25:07Z",
+            "departure_date": "2016-03-08T22:25:11Z",
+            "schedule_id": "GL4425",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:25:15.135Z",
+            "updated_at": "2016-03-09T22:25:12.804Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 10,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-03-03T22:25:40Z",
+            "departure_date": "2016-03-08T22:26:05Z",
+            "schedule_id": "DO2368",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:26:15.738Z",
+            "updated_at": "2016-03-09T22:25:12.768Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 11,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-03-09T22:26:33Z",
+            "departure_date": "2016-03-10T22:26:40Z",
+            "schedule_id": "NQ5692",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:26:44.324Z",
+            "updated_at": "2016-03-09T22:25:12.730Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 12,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-03-05T22:27:16Z",
+            "departure_date": "2016-03-10T22:27:22Z",
+            "schedule_id": "TN1133",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:27:38.918Z",
+            "updated_at": "2016-03-09T22:25:12.693Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 13,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-03-11T22:27:50Z",
+            "departure_date": "2016-03-12T22:27:59Z",
+            "schedule_id": "XL6716",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:28:03.195Z",
+            "updated_at": "2016-03-09T22:25:12.651Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 14,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-03-07T22:28:31Z",
+            "departure_date": "2016-03-12T22:28:50Z",
+            "schedule_id": "TW1405",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:28:55.340Z",
+            "updated_at": "2016-03-09T22:25:12.615Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 15,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-03-13T22:29:47Z",
+            "departure_date": "2016-03-14T22:29:55Z",
+            "schedule_id": "ZH2659",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:30:00.346Z",
+            "updated_at": "2016-03-09T22:25:12.577Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 16,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-03-09T22:30:20Z",
+            "departure_date": "2016-03-14T22:30:29Z",
+            "schedule_id": "SQ7915",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:30:33.018Z",
+            "updated_at": "2016-03-09T22:25:12.536Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 17,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-03-15T22:30:48Z",
+            "departure_date": "2016-03-16T22:30:54Z",
+            "schedule_id": "UQ2825",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:30:58.026Z",
+            "updated_at": "2016-03-09T22:25:12.498Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 18,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-03-15T22:30:48Z",
+            "departure_date": "2016-03-16T22:30:54Z",
+            "schedule_id": "LJ7638",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:30:58.151Z",
+            "updated_at": "2016-03-09T22:25:12.462Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 19,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-03-11T22:31:18Z",
+            "departure_date": "2016-03-16T22:31:29Z",
+            "schedule_id": "MB2498",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:31:34.959Z",
+            "updated_at": "2016-03-09T22:25:12.425Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 20,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-03-17T22:31:54Z",
+            "departure_date": "2016-03-18T22:32:01Z",
+            "schedule_id": "WY9121",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:32:12.216Z",
+            "updated_at": "2016-03-09T22:25:12.388Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 21,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-03-13T22:32:29Z",
+            "departure_date": "2016-03-18T22:32:39Z",
+            "schedule_id": "EY2372",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:32:44.228Z",
+            "updated_at": "2016-03-09T22:25:12.349Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 22,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-03-19T22:33:16Z",
+            "departure_date": "2016-03-20T22:33:23Z",
+            "schedule_id": "IW5886",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:33:27.849Z",
+            "updated_at": "2016-03-09T22:25:12.306Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 23,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-03-15T22:33:57Z",
+            "departure_date": "2016-03-20T22:34:17Z",
+            "schedule_id": "KL4172",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:34:22.386Z",
+            "updated_at": "2016-03-09T22:25:12.269Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 24,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-03-21T22:34:36Z",
+            "departure_date": "2016-03-22T22:34:39Z",
+            "schedule_id": "UA2387",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:34:53.754Z",
+            "updated_at": "2016-03-09T22:25:12.226Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 25,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-03-17T22:35:13Z",
+            "departure_date": "2016-03-22T22:35:29Z",
+            "schedule_id": "XP1111",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:35:34.107Z",
+            "updated_at": "2016-03-09T22:25:12.188Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 26,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-03-23T22:35:51Z",
+            "departure_date": "2016-03-24T22:35:55Z",
+            "schedule_id": "DM7092",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:36:03.934Z",
+            "updated_at": "2016-03-09T22:25:12.151Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 27,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-03-19T22:36:24Z",
+            "departure_date": "2016-03-24T22:36:31Z",
+            "schedule_id": "BF5379",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:36:36.924Z",
+            "updated_at": "2016-03-09T22:25:12.115Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 28,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-03-25T22:37:44Z",
+            "departure_date": "2016-03-26T22:39:35Z",
+            "schedule_id": "TH2065",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:39:40.404Z",
+            "updated_at": "2016-03-09T22:25:12.077Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 29,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-03-21T22:39:59Z",
+            "departure_date": "2016-03-26T22:40:25Z",
+            "schedule_id": "VK2736",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:40:29.503Z",
+            "updated_at": "2016-03-09T22:25:12.039Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 30,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-03-27T22:40:53Z",
+            "departure_date": "2016-03-28T22:40:57Z",
+            "schedule_id": "EQ1344",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:41:05.655Z",
+            "updated_at": "2016-03-09T22:25:12.002Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 31,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-03-23T22:41:25Z",
+            "departure_date": "2016-03-28T22:41:32Z",
+            "schedule_id": "KD6654",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:41:36.204Z",
+            "updated_at": "2016-03-09T22:25:11.960Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 32,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-03-29T22:41:55Z",
+            "departure_date": "2016-03-30T22:42:02Z",
+            "schedule_id": "ZP5479",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:42:06.926Z",
+            "updated_at": "2016-03-09T22:25:11.923Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 33,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-03-25T22:42:27Z",
+            "departure_date": "2016-03-30T22:42:38Z",
+            "schedule_id": "MZ8948",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:42:43.477Z",
+            "updated_at": "2016-03-09T22:25:11.887Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 34,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-03-31T22:43:02Z",
+            "departure_date": "2016-04-01T22:43:09Z",
+            "schedule_id": "LW3595",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:43:13.186Z",
+            "updated_at": "2016-03-09T22:25:11.848Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 35,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-03-27T22:45:22Z",
+            "departure_date": "2016-04-01T22:45:29Z",
+            "schedule_id": "SC3349",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:45:33.580Z",
+            "updated_at": "2016-03-09T22:25:11.811Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 36,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-04-02T22:45:53Z",
+            "departure_date": "2016-04-03T22:46:07Z",
+            "schedule_id": "QJ7810",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:46:10.744Z",
+            "updated_at": "2016-03-09T22:25:11.774Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 37,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-03-29T22:47:08Z",
+            "departure_date": "2016-04-03T22:47:18Z",
+            "schedule_id": "LH2729",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:47:39.050Z",
+            "updated_at": "2016-03-09T22:25:11.736Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 38,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-04-04T22:48:10Z",
+            "departure_date": "2016-04-05T22:48:17Z",
+            "schedule_id": "HM4673",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:48:22.421Z",
+            "updated_at": "2016-03-09T22:25:11.687Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 39,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-03-31T22:48:51Z",
+            "departure_date": "2016-04-05T22:49:02Z",
+            "schedule_id": "VF6872",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:49:09.214Z",
+            "updated_at": "2016-03-09T22:25:11.650Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 40,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-04-06T22:49:24Z",
+            "departure_date": "2016-04-07T22:49:44Z",
+            "schedule_id": "ZW8055",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:49:48.378Z",
+            "updated_at": "2016-03-09T22:25:11.612Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 41,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-04-02T22:54:53Z",
+            "departure_date": "2016-04-07T22:55:05Z",
+            "schedule_id": "ZE2479",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:55:28.494Z",
+            "updated_at": "2016-03-09T22:25:11.575Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 42,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-04-08T22:56:04Z",
+            "departure_date": "2016-04-09T22:56:11Z",
+            "schedule_id": "XR8188",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:56:15.600Z",
+            "updated_at": "2016-03-09T22:25:11.537Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 43,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-04-04T22:56:47Z",
+            "departure_date": "2016-04-09T22:57:02Z",
+            "schedule_id": "DQ9399",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:57:41.783Z",
+            "updated_at": "2016-03-09T22:25:11.501Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 44,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-04-10T22:58:02Z",
+            "departure_date": "2016-04-11T22:58:13Z",
+            "schedule_id": "LQ9866",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T22:58:18.328Z",
+            "updated_at": "2016-03-09T22:25:11.464Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 45,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-04-06T22:58:36Z",
+            "departure_date": "2016-04-11T22:58:43Z",
+            "schedule_id": "JD8272",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T22:58:48.881Z",
+            "updated_at": "2016-03-09T22:25:11.426Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 46,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-04-12T22:59:27Z",
+            "departure_date": "2016-04-13T22:59:35Z",
+            "schedule_id": "HP7571",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:00:30.732Z",
+            "updated_at": "2016-03-09T22:25:11.384Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 47,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-04-08T23:00:52Z",
+            "departure_date": "2016-03-13T23:01:01Z",
+            "schedule_id": "UT6061",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:01:42.299Z",
+            "updated_at": "2016-03-09T22:25:11.348Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 48,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-04-14T23:01:56Z",
+            "departure_date": "2016-04-15T23:02:27Z",
+            "schedule_id": "AN4060",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:02:31.300Z",
+            "updated_at": "2016-03-09T22:25:11.310Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 49,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-04-10T23:02:49Z",
+            "departure_date": "2016-03-15T23:02:56Z",
+            "schedule_id": "YM4815",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:03:00.523Z",
+            "updated_at": "2016-03-09T22:25:11.273Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 50,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-04-16T23:03:26Z",
+            "departure_date": "2016-04-17T23:03:33Z",
+            "schedule_id": "FY8613",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:03:38.473Z",
+            "updated_at": "2016-03-09T22:25:11.237Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 51,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-04-12T23:04:16Z",
+            "departure_date": "2016-04-17T23:04:24Z",
+            "schedule_id": "MZ7810",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:04:28.748Z",
+            "updated_at": "2016-03-09T22:25:11.201Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 52,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-04-18T23:04:49Z",
+            "departure_date": "2016-04-19T23:04:58Z",
+            "schedule_id": "VG9059",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:05:02.637Z",
+            "updated_at": "2016-03-09T22:25:11.163Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 53,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-04-14T23:06:28Z",
+            "departure_date": "2016-04-19T23:06:35Z",
+            "schedule_id": "YR7890",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:06:49.534Z",
+            "updated_at": "2016-03-09T22:25:11.126Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 54,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-04-20T23:07:09Z",
+            "departure_date": "2016-04-21T23:07:16Z",
+            "schedule_id": "SD4481",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:07:25.614Z",
+            "updated_at": "2016-03-09T22:25:11.089Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 55,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-04-16T23:07:53Z",
+            "departure_date": "2016-04-21T23:08:04Z",
+            "schedule_id": "OE6098",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:08:12.123Z",
+            "updated_at": "2016-03-09T22:25:11.051Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 56,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-04-22T23:08:31Z",
+            "departure_date": "2016-04-23T23:08:41Z",
+            "schedule_id": "WJ2058",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:08:46.001Z",
+            "updated_at": "2016-03-09T22:25:11.013Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 57,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-03-18T23:09:05Z",
+            "departure_date": "2016-03-23T23:09:13Z",
+            "schedule_id": "XP7751",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:09:18.404Z",
+            "updated_at": "2016-03-09T22:25:10.976Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 58,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-04-24T23:09:47Z",
+            "departure_date": "2016-04-25T23:09:59Z",
+            "schedule_id": "RB1710",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:10:04.782Z",
+            "updated_at": "2016-03-09T22:25:10.938Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 59,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-04-20T23:10:26Z",
+            "departure_date": "2016-03-25T23:10:47Z",
+            "schedule_id": "YC1651",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:10:51.565Z",
+            "updated_at": "2016-03-09T22:25:10.901Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 60,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-04-26T23:11:09Z",
+            "departure_date": "2016-04-27T23:11:18Z",
+            "schedule_id": "XM3613",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:11:24.013Z",
+            "updated_at": "2016-03-09T22:25:10.863Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 61,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-04-22T23:11:57Z",
+            "departure_date": "2016-04-27T23:12:06Z",
+            "schedule_id": "OK2589",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:12:09.988Z",
+            "updated_at": "2016-03-09T22:25:10.826Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 62,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-04-28T23:12:32Z",
+            "departure_date": "2016-04-29T23:12:42Z",
+            "schedule_id": "RH7312",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:12:46.196Z",
+            "updated_at": "2016-03-09T22:25:10.788Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 63,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-04-24T23:12:32Z",
+            "departure_date": "2016-04-29T23:12:42Z",
+            "schedule_id": "WR4221",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:12:46.374Z",
+            "updated_at": "2016-03-09T22:25:10.750Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 64,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-03-30T23:15:10Z",
+            "departure_date": "2016-05-01T23:15:39Z",
+            "schedule_id": "RQ6309",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:15:46.165Z",
+            "updated_at": "2016-03-09T22:25:10.713Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 65,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-04-26T23:17:04Z",
+            "departure_date": "2016-04-30T23:17:29Z",
+            "schedule_id": "LZ6132",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:17:34.497Z",
+            "updated_at": "2016-03-09T22:25:10.663Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 66,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-05-01T23:18:12Z",
+            "departure_date": "2016-05-02T23:18:19Z",
+            "schedule_id": "DB7507",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:18:26.484Z",
+            "updated_at": "2016-03-09T22:25:10.626Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 67,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-04-28T23:30:24Z",
+            "departure_date": "2016-05-02T23:30:42Z",
+            "schedule_id": "BO6219",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:30:54.025Z",
+            "updated_at": "2016-03-09T22:25:10.591Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 68,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-05-03T23:31:14Z",
+            "departure_date": "2016-05-04T23:31:21Z",
+            "schedule_id": "DW7379",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:31:27.420Z",
+            "updated_at": "2016-03-09T22:25:10.554Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 69,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-04-30T23:31:50Z",
+            "departure_date": "2016-05-04T23:32:00Z",
+            "schedule_id": "JN2036",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:32:03.795Z",
+            "updated_at": "2016-03-09T22:25:10.511Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 70,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-05-05T23:32:21Z",
+            "departure_date": "2016-05-06T23:32:30Z",
+            "schedule_id": "HR2496",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:32:34.045Z",
+            "updated_at": "2016-03-09T22:25:10.475Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 71,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-05-02T23:33:15Z",
+            "departure_date": "2016-05-06T23:33:43Z",
+            "schedule_id": "FM7492",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:33:47.745Z",
+            "updated_at": "2016-03-09T22:25:10.437Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 72,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-05-07T23:35:17Z",
+            "departure_date": "2016-05-08T23:35:25Z",
+            "schedule_id": "OA7320",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:35:30.443Z",
+            "updated_at": "2016-03-09T22:25:10.400Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 73,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-05-03T23:35:49Z",
+            "departure_date": "2016-05-08T23:36:16Z",
+            "schedule_id": "VP2853",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:36:33.047Z",
+            "updated_at": "2016-03-09T22:25:10.362Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 74,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-05-09T23:36:47Z",
+            "departure_date": "2016-05-10T23:36:55Z",
+            "schedule_id": "PG6346",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:37:04.113Z",
+            "updated_at": "2016-03-09T22:25:10.326Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 75,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-05-05T23:37:40Z",
+            "departure_date": "2016-03-10T23:37:45Z",
+            "schedule_id": "IM1659",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:37:52.286Z",
+            "updated_at": "2016-03-09T22:25:10.288Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 76,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-05-11T23:38:30Z",
+            "departure_date": "2016-05-12T23:38:37Z",
+            "schedule_id": "OI9917",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:38:41.326Z",
+            "updated_at": "2016-03-09T22:25:10.250Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 77,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-05-07T23:39:10Z",
+            "departure_date": "2016-05-12T23:39:17Z",
+            "schedule_id": "CP6342",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:39:30.573Z",
+            "updated_at": "2016-03-09T22:25:10.212Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 78,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-05-13T23:41:52Z",
+            "departure_date": "2016-05-14T23:42:01Z",
+            "schedule_id": "GT3452",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:42:07.511Z",
+            "updated_at": "2016-03-09T22:25:10.174Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 79,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-05-09T23:42:26Z",
+            "departure_date": "2016-05-14T23:42:38Z",
+            "schedule_id": "PW9789",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:42:48.632Z",
+            "updated_at": "2016-03-09T22:25:10.136Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 80,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-05-15T23:43:01Z",
+            "departure_date": "2016-05-16T23:43:11Z",
+            "schedule_id": "TU3883",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:43:16.049Z",
+            "updated_at": "2016-03-09T22:25:10.098Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 81,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-05-11T23:43:42Z",
+            "departure_date": "2016-05-16T23:44:03Z",
+            "schedule_id": "VZ5611",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:44:23.223Z",
+            "updated_at": "2016-03-09T22:25:10.055Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 82,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-05-17T23:44:38Z",
+            "departure_date": "2016-05-18T23:44:44Z",
+            "schedule_id": "FK8008",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:44:50.396Z",
+            "updated_at": "2016-03-09T22:25:10.008Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 83,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-05-13T23:45:08Z",
+            "departure_date": "2016-05-18T23:45:21Z",
+            "schedule_id": "BA7465",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:45:28.909Z",
+            "updated_at": "2016-03-09T22:25:09.971Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 84,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-05-19T23:45:57Z",
+            "departure_date": "2016-05-20T23:46:03Z",
+            "schedule_id": "QF4097",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:46:07.492Z",
+            "updated_at": "2016-03-09T22:25:09.933Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 85,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-05-15T23:46:26Z",
+            "departure_date": "2016-05-20T23:46:33Z",
+            "schedule_id": "AJ9440",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:46:40.580Z",
+            "updated_at": "2016-03-09T22:25:09.890Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 86,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-05-21T23:47:00Z",
+            "departure_date": "2016-05-22T23:47:10Z",
+            "schedule_id": "UF8643",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:47:14.769Z",
+            "updated_at": "2016-03-09T22:25:09.854Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 87,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-05-17T23:47:44Z",
+            "departure_date": "2016-05-22T23:47:54Z",
+            "schedule_id": "LV9945",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:47:58.211Z",
+            "updated_at": "2016-03-09T22:25:09.817Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 88,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-05-23T23:48:14Z",
+            "departure_date": "2016-05-24T23:48:28Z",
+            "schedule_id": "ES6572",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:48:37.726Z",
+            "updated_at": "2016-03-09T22:25:09.778Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 89,
+        "fields": {
+            "vessel": 3,
+            "direction": 2,
+            "arrival_date": "2016-05-19T23:48:58Z",
+            "departure_date": "2016-05-24T23:49:06Z",
+            "schedule_id": "LF2105",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:49:10.642Z",
+            "updated_at": "2016-03-09T22:25:09.741Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 90,
+        "fields": {
+            "vessel": 3,
+            "direction": 1,
+            "arrival_date": "2016-05-25T23:49:40Z",
+            "departure_date": "2016-05-26T23:49:47Z",
+            "schedule_id": "GV1291",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:49:51.206Z",
+            "updated_at": "2016-03-09T22:25:09.704Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 91,
+        "fields": {
+            "vessel": 4,
+            "direction": 2,
+            "arrival_date": "2016-05-21T23:50:30Z",
+            "departure_date": "2016-05-26T23:50:38Z",
+            "schedule_id": "OL2769",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:50:47.356Z",
+            "updated_at": "2016-03-09T22:25:09.668Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 92,
+        "fields": {
+            "vessel": 4,
+            "direction": 1,
+            "arrival_date": "2016-05-27T23:51:00Z",
+            "departure_date": "2016-05-28T23:51:07Z",
+            "schedule_id": "IQ8163",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:51:11.619Z",
+            "updated_at": "2016-03-09T22:25:09.625Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 93,
+        "fields": {
+            "vessel": 2,
+            "direction": 2,
+            "arrival_date": "2016-05-23T23:51:57Z",
+            "departure_date": "2016-05-28T23:52:11Z",
+            "schedule_id": "XM7252",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:52:14.709Z",
+            "updated_at": "2016-03-09T22:25:09.586Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 94,
+        "fields": {
+            "vessel": 2,
+            "direction": 1,
+            "arrival_date": "2016-05-29T23:52:35Z",
+            "departure_date": "2016-05-30T23:52:42Z",
+            "schedule_id": "YG2704",
+            "description": "",
+            "current_passenger_count": 230,
+            "current_cargo_capacity": 858.0,
+            "created_at": "2016-02-29T23:52:50.689Z",
+            "updated_at": "2016-03-09T22:25:09.549Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 95,
+        "fields": {
+            "vessel": 1,
+            "direction": 2,
+            "arrival_date": "2016-05-25T23:53:18Z",
+            "departure_date": "2016-05-30T23:53:32Z",
+            "schedule_id": "KY4661",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:53:36.074Z",
+            "updated_at": "2016-03-09T22:25:09.512Z"
+        }
+    },
+    {
+        "model": "booking.vesselsschedule",
+        "pk": 96,
+        "fields": {
+            "vessel": 1,
+            "direction": 1,
+            "arrival_date": "2016-05-31T23:53:50Z",
+            "departure_date": "2016-06-01T23:54:02Z",
+            "schedule_id": "FX5686",
+            "description": "",
+            "current_passenger_count": 26,
+            "current_cargo_capacity": 544.5,
+            "created_at": "2016-02-29T23:54:05.903Z",
+            "updated_at": "2016-03-09T22:25:09.472Z"
+        }
+    }
+]

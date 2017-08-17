@@ -1,0 +1,236 @@
+{% extends 'user_port/main.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks get_dict_obj %}
+{% block page-title %}  {% trans 'Booking Items Create - Port of Baku' %} {% endblock page-title %}
+
+
+{% block content %}
+<section class="nav-section">
+        <div class="container">
+
+
+            <div class="nav-content-side">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+
+                        <h1 class="lead">{% trans 'Booking and passenger details' %}</h1>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-md-9">
+                                <table class="table table-bordered table-striped">
+                                    <tbody>
+                                    <tr class="info">
+                                        <th colspan="3">{% trans 'Away' %}</th>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-ship"></i> {{ schedule_to.direction.from_d }}
+                                            - {{ schedule_to.direction.to }}</td>
+                                        <td>{{ schedule_to.vessel }}
+                                            <small class="text-muted">{{ schedule_to.schedule_id }}</small>
+                                        </td>
+                                        <td><i class="fa fa-calendar"></i> {{ schedule_to.departure_date }}</td>
+                                    </tr>
+                                    {% if schedule_bak %}
+                                        <tr class="info">
+                                            <th colspan="3">{% trans 'Return way' %}</th>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-ship"></i> {{ schedule_bak.direction.from_d }}
+                                                - {{ schedule_bak.direction.to }}</td>
+                                            <td>{{ schedule_bak.vessel }}
+                                                <small class="text-muted">{{ schedule_bak.schedule_id }}</small>
+                                            </td>
+                                            <td><i class="fa fa-calendar"></i> {{ schedule_bak.departure_date }}</td>
+                                        </tr>
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="well well-sm" id="price-block">
+                                    <ul class="list-unstyled text-right small">
+                                        {% if price.cargo.back %}
+                                            <li><strong>{% trans 'Cargo' %}</strong>
+                                                <ul class="list-unstyled">
+                                                    <li>{% trans 'Away' %}: {{ price.cargo.away }} usd</li>
+                                                    <li>{% trans 'Return' %}: {{ price.cargo.back }} usd</li>
+                                                </ul>
+                                            </li>
+                                        {% else %}
+                                            <li><strong>{% trans 'Cargo' %}:</strong> {{ price.cargo.away }} usd</li>
+                                        {% endif %}
+                                        {% if price.passenger.back %}
+                                            <li><strong>{% trans 'Passenger' %}</strong>
+                                                <ul class="list-unstyled">
+                                                    <li>{% trans 'Away' %}: <span
+                                                            id="price-passenger-away">{{ price.passenger.away.min }} - {{ price.passenger.away.max }}</span>
+                                                        usd
+                                                    </li>
+                                                    <li>{% trans 'Return' %}: <span
+                                                            id="price-passenger-back">{{ price.passenger.back.min }} - {{ price.passenger.back.max }}</span>
+                                                        usd
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        {% else %}
+                                            <li><strong>{% trans 'Passenger' %}:</strong> <span
+                                                    id="price-passenger-away">{{ price.passenger.away.min }} - {{ price.passenger.away.max }}</span>
+                                                usd
+                                            </li>
+                                        {% endif %}
+                                        {% if price.portfee.back %}
+                                            <li><strong>{% trans 'Port fee' %}</strong>
+                                                <ul class="list-unstyled">
+                                                    <li>{% trans 'Away' %}: {{ price.portfee.away }} usd</li>
+                                                    <li>{% trans 'Return' %}: {{ price.portfee.back }} usd</li>
+                                                </ul>
+                                            </li>
+                                        {% else %}
+                                            <li><strong>{% trans 'Port fee' %}:</strong> {{ price.portfee.away }} usd
+                                            </li>
+                                        {% endif %}
+                                        {% comment %}{% if price.transit_fee and price.transit_fee.back %}
+                                                                        <li><strong>{% trans 'Non-transit' %}</strong>
+                                                                            <ul class="list-unstyled">
+                                                                                <li>{% trans 'Away' %}: {{ price.transit_fee.away }}%</li>
+                                                                                <li>{% trans 'Return' %}: {{ price.transit_fee.back }}%</li>
+                                                                            </ul>
+                                                                        </li>{% endcomment %}
+                                        {% if price.transit_fee %}
+                                            <li><strong>{% trans 'Non-transit' %}:</strong> <span id="price-transit"
+                                                                                                  data-percentage="{{ price.transit_fee.away }}">+{{ price.transit_fee.away }}%</span>
+                                            </li>
+                                        {% endif %}
+                                        <li class="total-price hide">
+                                            <hr/>
+                                        </li>
+                                        <li class="total-price hide"><h4>{% trans 'Total' %}: <span
+                                                id="price-total"></span> usd</h4></li>
+                                    </ul>
+                                </div>
+                                <!-- /.well well-sm -->
+                            </div>
+                            <!-- /.col-md-3 -->
+                        </div>
+                        <!-- /.row -->
+                        <br/><br/><br/>
+                        <!-- /.bg-primary -->
+                        <form method="post" id="booking-step-3" class="booking-step-3">{% csrf_token %}
+                            {{ cargo_formset.management_form }}
+                            {% if cargo_count %}
+                                <div class="row row-form">
+                                    {% if cargo_count %}
+                                        <div class="col-md-3 side-info"><h4 class="side-title">{% trans 'Vehicles' %}</h4></div>{% endif %}
+                                    <!-- /.col-md-3 -->
+                                    <div class="col-md-9 border-left">
+
+                                        {% for form in cargo_formset %}
+                                            <div class="row">
+                                                <div class="col-md-9 form-inline cargo-formset">
+                                                    {% include "booking/partials/form_fields.html" with form=form %}
+                                                </div>
+                                                <div class="col-md-3 text-right">
+                                                    {% with price=cargo_prices|dict_obj:forloop.counter0 %}
+
+                                                        <p class="small">{% trans 'Away:' %} <span class="label label-default">{{ price.price_to }} {% trans 'usd' %}</span></p>
+                                                        {% if price.price_bak %}<p class="small">{% trans 'Return:' %} <span class="label label-default">{{ price.price_bak }} {% trans 'usd' %}</span></p>{% endif %}
+
+                                                    {% endwith %}
+                                                </div>
+                                            </div>
+                                            {% if not forloop.last %} <hr/>{% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <!-- /.col-md-9 -->
+                                </div>
+                                <!-- /.row -->
+                                <br/><br/><br/>
+                            {% endif %}
+
+                            {{ passenger_formset.management_form }}
+                            {% if passenger_acount %}
+                                <div class="row row-form">
+                                    <div class="col-md-3">
+                                        <h4 class="side-title">{% trans 'Passengers/Drivers' %}</h4>
+
+                                        <h5 class="text-right">{% trans 'Availability:' %}</h5>
+                                        <ul class="list-unstyled text-right list-availability" id="passenger_spots" data-spot="{% trans 'spot' %}" data-away="{% trans 'Away' %}" data-back="{% trans 'Back' %}">
+                                            <li>{% trans 'loading...' %}</li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.col-md-3 -->
+                                    <div class="col-md-9 border-left" id="passenger_forms">
+                                        <div class="row">
+                                            {% for form in passenger_formset %}
+                                                <div class="col-md-12 form-inline passenger-formset">
+                                                    {% include "booking/partials/form_fields.html" with form=form %}
+
+                                                    {% if not forloop.last %}
+                                                        <hr/>{% endif %}
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <!-- /.col-md-9 -->
+                                </div>
+                                <!-- /.row -->
+                                <br/><br/><br/>
+                            {% endif %}
+
+
+                            <div class="row row-form section">
+                                <div class="col-md-3 side-info"><h4 class="side-title">{% trans 'Contact Person' %}</h4></div>
+                                <!-- /.col-md-3 -->
+                                <div class="col-md-9 border-left">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                {% include "booking/partials/form_fields.html" with form=form %}
+                                            </div>
+                                        </div>
+                                </div>
+                                <!-- /.col-md-9 -->
+                            </div>
+
+                            <br/>
+                            <hr/>
+
+
+                            <!-- /.row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a class="btn btn-default btn-lg" href="{% url 'booking:user-booking' %}"><i
+                                            class="glyphicon glyphicon-chevron-left"></i> {% trans 'Back' %}</a>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <button type="submit" class="btn btn-primary btn-lg"
+                                            data-loading-text="{% trans 'Loading...' %}">
+                                        {% trans 'Book now' %}
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </form>
+
+
+
+                    </div>
+                    <!-- /.col-md-10 col-md-offset-1 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.nav-content-side -->
+
+        </div>
+        <!-- /.container -->
+    </section>
+{% endblock content %}
+
+{% block page-js %}
+    <script defer src="{% static 'front/js/build/jquery.sticky-kit.min.js' %}"></script>
+    <script type="text/javascript">
+        var CALC_PRICE_URL = "{% url 'booking:booking-create' %}";
+    </script>
+{#    <script src="//localhost:35729/livereload.js"></script>#}
+{% endblock page-js %}

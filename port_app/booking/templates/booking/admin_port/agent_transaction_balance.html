@@ -1,0 +1,135 @@
+{% extends 'admin_port/layout.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block page-title %}  {% trans 'Agent Transaction Balance' %} {% endblock page-title %}
+
+
+{% block content %}
+
+
+<!-- ====================================================
+================= CONTENT ===============================
+===================================================== -->
+<section id="content">
+
+    <div class="page page-dashboard">
+
+        <div class="pageheader">
+
+            <h2>{% trans 'Admin' %} <span>{% trans '// Manage system' %}</span></h2>
+
+            <div class="page-bar">
+
+                <ul class="page-breadcrumb">
+                    <li>
+                        <a href="#"><i class="fa fa-home"></i> {% trans 'Port of Baku' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% trans 'Admin' %}</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- cards row -->
+        <div class="row">
+
+            <!-- col -->
+            <div class="card-container col-sm-12">
+
+                <section class="tile">
+
+                    <!-- tile header -->
+                    <div class="tile-header dvd dvd-btm">
+                        <h1 class="custom-font"><strong>{% trans 'Add Transaction' %} </strong></h1>
+                        <ul class="controls">
+                            <li class="remove"><a role="button" tabindex="0" class="tile-close"><i class="fa fa-times"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /tile header -->
+
+                    <!-- tile body -->
+                    <div class="tile-body">
+
+                        <div class="row">
+
+                            <div class="col-sm-10 col-sm-offset-1">
+                                    {% if object %}
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label"></label>
+                                        <div class="col-sm-9">
+
+                                            <div class="bg-greensea clearfix">
+                                                <h4 class="custom-font filled"><strong>{% trans 'Company:' %} </strong> {{ object.owner.agent.name }}</h4>
+                                                <h6 class="custom-font filled"><strong>{% trans 'Contact name:' %} </strong>{{ object.owner.get_full_name }} </h6>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    {% else %}
+                                        {% include "partials/search.html" %}
+                                    {% endif %}
+
+                                <form class="form-horizontal" role="form" method="post">
+                                    {% csrf_token %}
+                                    {% for field in form.visible_fields %}
+                                        <div class="form-group{% if field.errors %} has-error{% endif %}">
+                                            {% if field.errors %} <div class="alert alert-danger" role="alert">{{ field.errors }}</div> {% endif %}
+                                            <label class="font-pg"{% if field.errors %}
+                                                   data-toggle="tooltip" title="{% for error in field.errors %}{{ error|escape }}{% endfor %}"{% endif %}
+                                                   for="{{ field.id_for_label }}"></label>
+                                            <label for="field.label" class="col-sm-3 control-label">{{ field.label }}:</label>
+                                            <div class="col-sm-9">
+                                                {{ field|attr:"placeholder:"|add_class:'form-control' }}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+                                    <div class="text-right">
+                                        <button type="submit" class="btn btn-greensea">{% trans 'Save' %}</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                            <!-- /.col-sm-12 -->
+
+                        </div>
+                        <!-- /.row -->
+
+                    </div>
+                    <!-- /tile body -->
+
+                </section>
+
+            </div>
+            <!-- /col -->
+
+        </div>
+        <!-- /row -->
+
+
+
+    </div>
+
+
+</section>
+<!--/ CONTENT -->
+{% endblock content %}
+
+
+{% block js-script %}
+
+<script>
+    $(window).load(function(){
+
+        $('.footable').footable();
+
+    });
+</script>
+<!--/ Page Specific Scripts -->
+{% endblock js-script %}

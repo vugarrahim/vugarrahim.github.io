@@ -1,0 +1,55 @@
+{% extends 'admin_port/base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block page-title %}  {% trans 'Login' %} {% endblock page-title %}
+
+{% block layout %}
+
+    <div class="page page-core page-login">
+
+                <div class="text-center"><h3 class="text-light text-white">{% trans 'Port of Baku' %}</h3></div>
+
+                <div class="container w-420 p-15 bg-white mt-40 text-center">
+
+
+                    <h2 class="text-light text-greensea">{% trans 'Log In' %}</h2>
+
+                    <form name="form" class="form-validation mt-20" novalidate="" method="post">{% csrf_token %}
+                        {{ form.non_field_errors }}
+                        {% for field in form.visible_fields %}
+                            <div class="form-group{% if field.errors %} has-error{% endif %}">
+                                    {% if field.errors %} <div class="alert alert-danger" role="alert">{{ field.errors.as_text }}</div> {% endif %}
+                                    <label class="font-pg"{% if field.errors %}
+                                           data-toggle="tooltip" title="{% for error in field.errors %}{{ error|escape }}{% endfor %}"{% endif %}
+                                           for="{{ field.id_for_label }}"></label>
+                                    {{ field|add_class:'form-control underline-input' }}
+                                    {{ field.placeholder }}
+                                    {% if field.help_text %}<span class="help-block">{{ field.help_text }}</span>{% endif %}
+                            </div>
+                        {% endfor %}
+                        <div class="form-group text-left mt-20">
+                            <button class="btn btn-greensea b-0 br-2 mr-5"
+                                    type="submit">
+                                {% trans 'Submit' %}
+                            </button>
+                            <a href="{% url 'accounts:password-reset' %}" class="pull-right mt-10">{% trans 'Forgot Password?' %}</a>
+                        </div>
+
+                    </form>
+
+                    <div class="bg-slategray lt wrap-reset mt-40">
+
+
+                    {% comment %}<div class="bg-slategray lt wrap-reset mt-40">
+                        <p class="m-0">
+                            <a href="{% url 'accounts:registration' %}" class="text-uppercase">{% trans 'Create an account' %}</a>
+                        </p>
+                    </div>{% endcomment %}
+
+
+                </div>
+
+            </div>
+
+{% endblock layout %}

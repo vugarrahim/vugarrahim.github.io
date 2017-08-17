@@ -1,0 +1,80 @@
+{% extends 'user_port/user_layout.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+    {% block page-title %}  {% trans 'User Booking History - Port of Baku' %} {% endblock page-title %}
+
+
+
+<!-- ====================================================
+================= CONTENT ===============================
+===================================================== -->
+{% block selected-menu-title %} {% trans 'My Bookings' %} {% endblock %}
+{% block selected-menu-content%}
+    {% if object_list %}
+        <div class="tile-body p-0">
+
+            <div class="table-responsive">
+                <table class="table mb-0" id="usersList">
+                    <thead>
+                    <tr>
+                        <th>{% trans 'Booking ID' %}</th>
+                        <th>{% trans 'Owner' %}</th>
+                        <th>{% trans 'Transit type' %}</th>
+                        <th>{% trans 'Booking type' %}</th>
+                        <th>{% trans 'Booking Status' %}</th>
+                        <th>{% trans 'Booking created at' %}</th>
+                        <th>{% trans 'Booking cargo count' %}</th>
+                        <th>{% trans 'Booking passenger count' %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for booking in object_list %}
+                    <tr>
+                        <td>{{ booking.booking_id }}</td>
+                        <td>{{ booking.owner.get_full_name }}</td>
+                        {% if booking.transit_type == '1' %}
+                            <td> Transit  </td>
+                        {% elif booking.transit_type == '2' %}
+                            <td> Non Transit  </td>
+                        {% endif %}
+
+                        {% if booking.booking_type == '2' %}
+                            <td> Return </td>
+                        {% elif booking.booking_type == '1' %}
+                            <td> One way  </td>
+                        {% endif %}
+
+                        {% if booking.done %}
+                            <td> {{ booking.done }}  </td>
+                        {% else %}
+                            <td> {{ booking.done }}  </td>
+                        {% endif %}
+                        <td>{{ booking.created_at }}</td>
+                        <td>{{ booking.cargo_count }}</td>
+                        <td>{{ booking.passenger_count }}</td>
+                        <td>
+                            <a href="{% url  'booking:booking-user-update' pk=booking.pk %}" class="btn btn-success btn-xs text-center"><i class="fa fa-cog"></i> {% trans 'Manage' %}</a>
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tile-footer dvd dvd-top">
+            <div class="row">
+
+                <div class="col-sm-3 col-sm-offset-5 text-center">
+                    <small class="text-muted">{% trans 'showing 20-30 of 50 items' %}</small>
+                </div>
+
+                {% include "partials/pagination.html" %}
+
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+

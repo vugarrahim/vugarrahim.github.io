@@ -1,0 +1,59 @@
+{% extends 'user_port/main.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+    {% block page-title %}  {% trans 'Sign up - Port of Baku' %} {% endblock page-title %}
+
+
+{% block content %}
+
+<!-- ====================================================
+================= CONTENT ===============================
+===================================================== -->
+<section class="nav-section">
+        <div class="container">
+            <div class="nav-content-side overview-box">
+                <ol class="breadcrumb over-breadcrumb">
+                    <li><a href="#"><i class="fa fa-home"></i></a></li>
+                    <li class="active">{% trans 'Register' %}</li>
+                </ol>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+
+                        <h2 class="sign-title">{% trans 'Sign up' %}</h2>
+                        <p class="sign-helper">{% trans 'Sign up now and receive exclusive offers with huge discounts' %}</p>
+
+                        <form class="section" method="post">{% csrf_token %}
+                            {% for field in form.visible_fields %}
+                                {% if field.html_name == 'accept' %}
+                                    <div class="form-group text-left">
+                                        {% if field.errors %} <div class="alert alert-danger" role="alert">{{ field.errors }}</div> {% endif %}
+                                        <label class="checkbox checkbox-custom-alt checkbox-custom-sm inline-block">
+                                            {{ field }}<i></i> {% trans 'I agree to the' %} <a href="{% url 'terms' %}">{% trans 'Terms of Service' %}</a> &amp; <a href="{% url 'privacy' %}">{% trans 'Privacy Policy' %}</a>
+                                        </label>
+                                    </div>
+                                {% else %}
+                                <div class="form-group{% if field.errors %} has-error{% endif %}">
+                                    {% if field.errors %} <div class="alert alert-danger" role="alert">{{ field.errors }}</div> {% endif %}
+                                    <label class="font-pg"{% if field.errors %}
+                                           data-toggle="tooltip" title="{% for error in field.errors %}{{ error|escape }}{% endfor %}"{% endif %}
+                                           for="{{ field.id_for_label }}"></label>
+                                    {{ field|add_class:'form-control sign-input' }}
+                                    {{ field.placeholder }}
+                                    {% if field.help_text %}<span class="help-block">{{ field.help_text }}</span>{% endif %}
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                            <button type="submit" class="btn blue-styled-btn">{% trans 'Sign up' %}</button>
+                        </form>
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.nav-content-side -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.nav-section -->
+{% endblock content %}

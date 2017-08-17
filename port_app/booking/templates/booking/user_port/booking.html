@@ -1,0 +1,55 @@
+{% extends 'user_port/user_layout.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+    {% block page-title %}  {% trans 'User Booking History - Port of Baku' %} {% endblock page-title %}
+
+
+
+<!-- ====================================================
+================= CONTENT ===============================
+===================================================== -->
+{% block selected-menu-title %} {% trans 'My Bookings' %} {% endblock %}
+{% block selected-menu-content%}
+{% if bookings %}
+    <div class="tile-body p-0">
+
+        <div class="table-responsive">
+            <table class="table mb-0" id="usersList">
+                <thead>
+                <tr>
+                    <th>{% trans 'Schedule ID' %}</th>
+                    <th>{% trans 'Schedule' %}</th>
+                    <th>{% trans 'Status' %}</th>
+                    <th>{% trans 'Type' %}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking.vessel_schedule }}</td>
+                    <td>{{ booking.vessel_schedule.direction.from_d.port }} > {{ booking.vessel_schedule.direction.to.port }}</td>
+                    {% if booking.done %}
+                        <td> {{ booking.done }}  </td>
+                    {% else %}
+                        <td> {{ booking.done }}  </td>
+                    {% endif %}
+                    {% if booking.type == '1' %}
+                        <td> Away  </td>
+                    {% elif booking.type == '2' %}
+                        <td> Return </td>
+                    {% endif %}
+                    <td>
+                        <a href="#" class="btn btn-success btn-xs text-center"><i class="fa fa-cog"></i> {% trans 'Manage' %}</a>
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endif %}
+{% endblock %}
+

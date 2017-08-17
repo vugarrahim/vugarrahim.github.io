@@ -1,0 +1,1785 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-31 12:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: accounts/admin.py:12
+msgid "Personal info"
+msgstr ""
+
+#: accounts/admin.py:13
+msgid "Permissions"
+msgstr ""
+
+#: accounts/admin.py:15
+msgid "Important dates"
+msgstr ""
+
+#: accounts/forms.py:23
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: accounts/forms.py:25 accounts/forms.py:69 accounts/forms.py:97
+#: templates/admin_port/layout-login.html:23
+msgid "Password"
+msgstr ""
+
+#: accounts/forms.py:27
+msgid "Password confirmation"
+msgstr ""
+
+#: accounts/forms.py:29
+msgid "Enter the same password as above, for verification."
+msgstr ""
+
+#: accounts/forms.py:70
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user's "
+"password, but you can change the password using <a href=\"password/\">this "
+"form</a>."
+msgstr ""
+
+#: accounts/forms.py:92
+msgid "Qaydalar"
+msgstr ""
+
+#: accounts/forms.py:93
+msgid "You must accept the rules"
+msgstr ""
+
+#: accounts/forms.py:113 accounts/forms.py:124
+msgid "New password"
+msgstr ""
+
+#: accounts/forms.py:116 accounts/forms.py:127
+msgid "New password confirmation"
+msgstr ""
+
+#: accounts/forms.py:121
+msgid "Old password"
+msgstr ""
+
+#: accounts/models.py:54
+msgid "first name"
+msgstr ""
+
+#: accounts/models.py:55
+msgid "last name"
+msgstr ""
+
+#: accounts/models.py:56
+msgid "email address"
+msgstr ""
+
+#: accounts/models.py:57
+msgid "telephone"
+msgstr ""
+
+#: accounts/models.py:58 booking/models.py:464
+msgid "Passport"
+msgstr ""
+
+#: accounts/models.py:59
+msgid "active"
+msgstr ""
+
+#: accounts/models.py:60
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: accounts/models.py:63
+msgid "date joined"
+msgstr ""
+
+#: accounts/models.py:162 booking/models.py:329 booking/models.py:502
+#: booking/templates/booking/admin_port/booking_check_in.html:87
+#: booking/templates/booking/admin_port/booking_list.html:83
+#: booking/templates/booking/user_port/user_booking_history.html:22
+msgid "Owner"
+msgstr ""
+
+#: accounts/models.py:163
+msgid "Agency Name"
+msgstr ""
+
+#: accounts/models.py:173
+#: booking/templates/booking/admin_port/agent_balance_list.html:84
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:82
+msgid "Agent"
+msgstr ""
+
+#: accounts/models.py:174
+msgid "Agents"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/add-agency.html:5
+#: accounts/templates/accounts/admin_port/add-agency.html:48
+#: accounts/templates/accounts/admin_port/agency.html:48
+#: booking/templates/booking/admin_port/agent_balance.html:48
+#: booking/templates/booking/admin_port/agent_transaction_balance_create.html:48
+#: booking/templates/booking/admin_port/vessel_schedule.html:48
+msgid "Add Agency"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/add-agency.html:20
+#: accounts/templates/accounts/admin_port/add-agency.html:29
+#: accounts/templates/accounts/admin_port/agency-list.html:18
+#: accounts/templates/accounts/admin_port/agency-list.html:27
+#: accounts/templates/accounts/admin_port/agency.html:20
+#: accounts/templates/accounts/admin_port/agency.html:29
+#: accounts/templates/accounts/admin_port/dashboard.html:18
+#: accounts/templates/accounts/admin_port/dashboard.html:27
+#: accounts/templates/accounts/admin_port/password-change.html:18
+#: accounts/templates/accounts/admin_port/password-change.html:27
+#: accounts/templates/accounts/admin_port/update-profile.html:18
+#: accounts/templates/accounts/admin_port/update-profile.html:27
+#: accounts/templates/accounts/admin_port/user_list.html:18
+#: accounts/templates/accounts/admin_port/user_list.html:27
+#: booking/templates/booking/admin_port/agent_balance.html:20
+#: booking/templates/booking/admin_port/agent_balance.html:29
+#: booking/templates/booking/admin_port/agent_balance_list.html:18
+#: booking/templates/booking/admin_port/agent_balance_list.html:27
+#: booking/templates/booking/admin_port/agent_transaction_balance.html:20
+#: booking/templates/booking/admin_port/agent_transaction_balance.html:29
+#: booking/templates/booking/admin_port/agent_transaction_balance_create.html:20
+#: booking/templates/booking/admin_port/agent_transaction_balance_create.html:29
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:19
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:28
+#: booking/templates/booking/admin_port/booking.html:18
+#: booking/templates/booking/admin_port/booking.html:27
+#: booking/templates/booking/admin_port/booking_check_in.html:19
+#: booking/templates/booking/admin_port/booking_check_in.html:28
+#: booking/templates/booking/admin_port/booking_check_items.html:18
+#: booking/templates/booking/admin_port/booking_check_items.html:27
+#: booking/templates/booking/admin_port/booking_list.html:18
+#: booking/templates/booking/admin_port/booking_list.html:27
+#: booking/templates/booking/admin_port/booking_step_one.html:18
+#: booking/templates/booking/admin_port/booking_step_one.html:27
+#: booking/templates/booking/admin_port/booking_step_three.html:18
+#: booking/templates/booking/admin_port/booking_step_three.html:27
+#: booking/templates/booking/admin_port/booking_step_two.html:18
+#: booking/templates/booking/admin_port/booking_step_two.html:27
+#: booking/templates/booking/admin_port/vessel_schedule.html:20
+#: booking/templates/booking/admin_port/vessel_schedule.html:29
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:18
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:27
+#: booking_payment/templates/booking_payment/admin_port/payment_page.html:18
+#: booking_payment/templates/booking_payment/admin_port/payment_page.html:27
+msgid "Admin"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/add-agency.html:20
+#: accounts/templates/accounts/admin_port/agency.html:20
+#: accounts/templates/accounts/admin_port/dashboard.html:18
+#: booking/templates/booking/admin_port/agent_balance.html:20
+#: booking/templates/booking/admin_port/agent_transaction_balance.html:20
+#: booking/templates/booking/admin_port/agent_transaction_balance_create.html:20
+#: booking/templates/booking/admin_port/booking_check_items.html:18
+#: booking/templates/booking/admin_port/vessel_schedule.html:20
+msgid "// Manage system"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/add-agency.html:26
+#: accounts/templates/accounts/admin_port/agency-list.html:24
+#: accounts/templates/accounts/admin_port/agency.html:26
+#: accounts/templates/accounts/admin_port/dashboard.html:24
+#: accounts/templates/accounts/admin_port/login.html:11
+#: accounts/templates/accounts/admin_port/password-change.html:24
+#: accounts/templates/accounts/admin_port/password-reset-confirm.html:12
+#: accounts/templates/accounts/admin_port/password-reset-done.html:12
+#: accounts/templates/accounts/admin_port/password-reset.html:13
+#: accounts/templates/accounts/admin_port/signup.html:9
+#: accounts/templates/accounts/admin_port/update-profile.html:24
+#: accounts/templates/accounts/admin_port/user_list.html:24
+#: accounts/templates/accounts/user_port/password-reset-confirm.html:13
+#: accounts/templates/accounts/user_port/password-reset-done.html:13
+#: accounts/templates/accounts/user_port/registration_confirm_email.html:13
+#: accounts/templates/accounts/user_port/registration_done.html:13
+#: booking/templates/booking/admin_port/agent_balance.html:26
+#: booking/templates/booking/admin_port/agent_balance_list.html:24
+#: booking/templates/booking/admin_port/agent_transaction_balance.html:26
+#: booking/templates/booking/admin_port/agent_transaction_balance_create.html:26
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:25
+#: booking/templates/booking/admin_port/booking.html:24
+#: booking/templates/booking/admin_port/booking_check_in.html:25
+#: booking/templates/booking/admin_port/booking_check_items.html:24
+#: booking/templates/booking/admin_port/booking_list.html:24
+#: booking/templates/booking/admin_port/booking_step_one.html:24
+#: booking/templates/booking/admin_port/booking_step_three.html:24
+#: booking/templates/booking/admin_port/booking_step_two.html:24
+#: booking/templates/booking/admin_port/vessel_schedule.html:26
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:24
+#: booking_payment/templates/booking_payment/admin_port/payment_page.html:24
+#: templates/admin_port/layout-login.html:9
+msgid "Port of Baku"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/add-agency.html:95
+#: accounts/templates/accounts/admin_port/agency.html:128
+#: accounts/templates/accounts/admin_port/password-change.html:80
+#: accounts/templates/accounts/admin_port/update-profile.html:139
+#: booking/templates/booking/admin_port/agent_balance.html:90
+#: booking/templates/booking/admin_port/agent_transaction_balance.html:93
+#: booking/templates/booking/admin_port/agent_transaction_balance_create.html:108
+#: booking/templates/booking/admin_port/vessel_schedule.html:95
+msgid "Save"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:5
+#: accounts/templates/accounts/admin_port/agency-list.html:46
+msgid "Agent list"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:18
+#: accounts/templates/accounts/admin_port/user_list.html:18
+#: booking/templates/booking/admin_port/agent_balance_list.html:18
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:19
+#: booking/templates/booking/admin_port/booking_check_in.html:19
+#: booking/templates/booking/admin_port/booking_list.html:18
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:18
+msgid "// sasas..."
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:51
+#: accounts/templates/accounts/admin_port/password-change.html:51
+#: accounts/templates/accounts/admin_port/update-profile.html:51
+#: accounts/templates/accounts/admin_port/user_list.html:51
+#: booking/templates/booking/admin_port/agent_balance_list.html:51
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:52
+#: booking/templates/booking/admin_port/booking.html:51
+#: booking/templates/booking/admin_port/booking_check_in.html:52
+#: booking/templates/booking/admin_port/booking_list.html:51
+#: booking/templates/booking/admin_port/booking_step_one.html:51
+#: booking/templates/booking/admin_port/booking_step_three.html:51
+#: booking/templates/booking/admin_port/booking_step_two.html:51
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:51
+#: booking_payment/templates/booking_payment/admin_port/payment_page.html:51
+msgid "Minimize"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:52
+#: accounts/templates/accounts/admin_port/password-change.html:52
+#: accounts/templates/accounts/admin_port/update-profile.html:52
+#: accounts/templates/accounts/admin_port/user_list.html:52
+#: booking/templates/booking/admin_port/agent_balance_list.html:52
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:53
+#: booking/templates/booking/admin_port/booking.html:52
+#: booking/templates/booking/admin_port/booking_check_in.html:53
+#: booking/templates/booking/admin_port/booking_list.html:52
+#: booking/templates/booking/admin_port/booking_step_one.html:52
+#: booking/templates/booking/admin_port/booking_step_three.html:52
+#: booking/templates/booking/admin_port/booking_step_two.html:52
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:52
+#: booking_payment/templates/booking_payment/admin_port/payment_page.html:52
+msgid "Expand"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:85
+#: accounts/templates/accounts/admin_port/user_list.html:85
+#: booking/models.py:240
+#: booking/templates/booking/admin_port/agent_balance_list.html:83
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:81
+msgid "Name"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:86
+#: accounts/templates/accounts/admin_port/user_list.html:86
+msgid "E-mail"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:87
+#: accounts/templates/accounts/admin_port/user_list.html:87
+msgid "Telephone"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:88
+msgid "Company"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:89
+#: accounts/templates/accounts/admin_port/user_list.html:89
+#: booking/templates/booking/admin_port/booking.html:70
+#: booking/templates/booking/admin_port/booking_check_items.html:85
+#: booking/templates/booking/user_port/booking.html:23
+msgid "Status"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:90
+#: accounts/templates/accounts/admin_port/user_list.html:88
+msgid "Registration Date"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:108
+#: accounts/templates/accounts/admin_port/user_list.html:107
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:99
+#: booking/templates/booking/admin_port/booking.html:90
+#: booking/templates/booking/admin_port/booking_list.html:118
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:145
+#: booking/templates/booking/user_port/booking.html:43
+#: booking/templates/booking/user_port/user_booking_history.html:57
+msgid "Manage"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency-list.html:121
+#: accounts/templates/accounts/admin_port/user_list.html:121
+#: booking/templates/booking/admin_port/agent_balance_list.html:116
+#: booking/templates/booking/admin_port/booking_check_in.html:133
+#: booking/templates/booking/admin_port/booking_list.html:132
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:160
+#: booking/templates/booking/user_port/user_booking_history.html:71
+msgid "showing 20-30 of 50 items"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency.html:5
+#: accounts/templates/accounts/admin_port/dashboard.html:83
+#: templates/admin_port/layout.html:143
+msgid "Agency"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency.html:69
+#: booking/templates/booking/admin_port/agent_balance.html:67
+#: booking/templates/booking/admin_port/agent_transaction_balance.html:67
+msgid "Company:"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/agency.html:70
+#: booking/templates/booking/admin_port/agent_balance.html:68
+#: booking/templates/booking/admin_port/agent_transaction_balance.html:68
+msgid "Contact name:"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/dashboard.html:5
+#: templates/admin_port/layout.html:137
+msgid "Dashboard"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/dashboard.html:54
+#: templates/admin_port/layout.html:139
+msgid "Users"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/dashboard.html:110
+msgid "Bookings"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/dashboard.html:136
+#: booking/models.py:160
+msgid "Vessels"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/dashboard.html:136
+msgid "Map"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/login.html:5
+#: accounts/templates/accounts/user_port/login.html:18
+#: accounts/templates/accounts/user_port/login.html:23
+#: accounts/templates/accounts/user_port/login.html:39
+#: templates/admin_port/layout-login.html:27
+msgid "Login"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/login.html:16
+#: templates/admin_port/layout-login.html:14
+msgid "Log In"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/login.html:34
+#: accounts/templates/accounts/admin_port/password-reset-confirm.html:42
+#: accounts/templates/accounts/admin_port/password-reset.html:43
+#: accounts/templates/accounts/admin_port/signup.html:49
+#: accounts/templates/accounts/user_port/password-reset-confirm.html:43
+#: booking/templates/booking/admin_port/booking_check_items.html:143
+msgid "Submit"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/login.html:36
+#: accounts/templates/accounts/admin_port/password-reset-confirm.html:16
+#: accounts/templates/accounts/admin_port/password-reset.html:17
+#: accounts/templates/accounts/user_port/password-reset-confirm.html:17
+#: templates/admin_port/layout-login.html:31
+msgid "Forgot Password?"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-change.html:5
+#: templates/admin_port/layout.html:43
+msgid "Change password"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-change.html:18
+#: accounts/templates/accounts/admin_port/update-profile.html:18
+#: booking/templates/booking/admin_port/booking.html:18
+#: booking/templates/booking/admin_port/booking_step_one.html:18
+#: booking/templates/booking/admin_port/booking_step_three.html:18
+#: booking/templates/booking/admin_port/booking_step_two.html:18
+#: booking_payment/templates/booking_payment/admin_port/payment_page.html:18
+msgid "// Manage system..."
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-change.html:46
+#: accounts/templates/accounts/admin_port/update-profile.html:46
+#: booking/templates/booking/admin_port/booking_list.html:46
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:46
+msgid "Define"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-change.html:46
+#: accounts/templates/accounts/admin_port/update-profile.html:46
+#: booking/templates/booking/admin_port/booking_list.html:46
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:46
+#: templates/user_port/user_layout.html:5
+msgid "User"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-reset-confirm.html:5
+msgid "Reset Password Confirm"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-reset-confirm.html:21
+#: accounts/templates/accounts/admin_port/password-reset.html:22
+#: accounts/templates/accounts/user_port/password-reset-confirm.html:22
+msgid "Enter your e-mail address below to reset your password."
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-reset-confirm.html:38
+#: accounts/templates/accounts/admin_port/password-reset.html:39
+#: accounts/templates/accounts/admin_port/signup.html:45
+#: accounts/templates/accounts/user_port/password-reset-confirm.html:39
+#: booking/templates/booking/admin_port/booking_check_items.html:144
+#: booking/templates/booking/admin_port/booking_step_three.html:218
+#: booking/templates/booking/admin_port/booking_step_three.html:264
+#: booking/templates/booking/admin_port/booking_step_two.html:163
+#: booking/templates/booking/user_port/booking_items_create.html:160
+#: booking/templates/booking/user_port/booking_items_create.html:205
+#: booking/templates/booking/user_port/booking_select_ship.html:109
+msgid "Back"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-reset-done.html:5
+msgid "Reset Password Done"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-reset-done.html:16
+msgid ""
+"You should soon receive an email allowing you to reset your password. Please "
+"make sure to check your spam and trash if you can not find the email."
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-reset-done.html:17
+#: accounts/templates/accounts/user_port/password-reset-done.html:18
+msgid "Please"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-reset-done.html:17
+#: accounts/templates/accounts/user_port/password-reset-done.html:18
+#: accounts/templates/accounts/user_port/registration_done.html:18
+msgid "login"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/password-reset.html:5
+msgid "Reset Password"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/signup.html:5
+#: accounts/templates/accounts/admin_port/signup.html:13
+#: accounts/templates/accounts/user_port/signup.html:23
+#: accounts/templates/accounts/user_port/signup.html:47
+msgid "Sign up"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/signup.html:17
+msgid "Enter your personal details below:"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/signup.html:24
+#: accounts/templates/accounts/user_port/signup.html:32
+msgid "I agree to the"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/signup.html:24
+#: accounts/templates/accounts/user_port/signup.html:32
+msgid "Terms of Service"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/signup.html:24
+#: accounts/templates/accounts/user_port/signup.html:32
+msgid "Privacy Policy"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/update-profile.html:5
+msgid "Update Profile"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/update-profile.html:102
+msgid "Name:"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/update-profile.html:103
+msgid "Status:"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/user_list.html:5
+msgid "Users List"
+msgstr ""
+
+#: accounts/templates/accounts/admin_port/user_list.html:46
+msgid "User list"
+msgstr ""
+
+#: accounts/templates/accounts/emails/password-reset-email.html:3
+#: accounts/templates/accounts/emails/user-password-reset-email.html:3
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: accounts/templates/accounts/emails/password-reset-email.html:5
+#: accounts/templates/accounts/emails/user-password-reset-email.html:5
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: accounts/templates/accounts/emails/password-reset-email.html:9
+#: accounts/templates/accounts/emails/user-password-reset-email.html:9
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: accounts/templates/accounts/emails/password-reset-email.html:11
+#: accounts/templates/accounts/emails/user-password-reset-email.html:11
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: accounts/templates/accounts/emails/password-reset-email.html:13
+#: accounts/templates/accounts/emails/user-password-reset-email.html:13
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: accounts/templates/accounts/emails/password-reset-subject.txt:2
+#, python-format
+msgid "Password reset on %(site_name)s"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/login.html:5
+msgid "Login - Port of Baku"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/password-change.html:5
+#: accounts/templates/accounts/user_port/update_profile.html:5
+#: booking/templates/booking/user_port/booking_step_one.html:6
+#: booking_payment/templates/booking_payment/error_page.html.html:6
+#: booking_payment/templates/booking_payment/payment_page.html:6
+msgid "Booking - Port of Baku"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/password-change.html:35
+#: accounts/templates/accounts/user_port/update_profile.html:35
+msgid "Save Changes"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/password-reset-confirm.html:5
+msgid "Password Reset Confirm - Port of Baku"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/password-reset-done.html:5
+msgid "Password Reset Done - Port of Baku"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/password-reset-done.html:17
+msgid ""
+"You should soon receive an email allowing you to reset your password. Please "
+"make sure to check your spam and trash if you can"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/password-reset.html:5
+msgid "Password Reset - Port of Baku"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/password-reset.html:18
+#: accounts/templates/accounts/user_port/password-reset.html:23
+msgid "Password reset"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/password-reset.html:38
+msgid "Send email"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/registration_confirm_email.html:5
+msgid "Registration Confirm Email - Port of Baku"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/registration_confirm_email.html:18
+msgid "Please confirm your email"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/registration_done.html:5
+msgid "Registration completed - Port of Baku"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/registration_done.html:18
+msgid "Log in to your account"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/signup.html:5
+msgid "Sign up - Port of Baku"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/signup.html:18
+msgid "Register"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/signup.html:24
+msgid "Sign up now and receive exclusive offers with huge discounts"
+msgstr ""
+
+#: accounts/templates/accounts/user_port/update_profile.html:38
+msgid "Change Password"
+msgstr ""
+
+#: booking/forms.py:61 booking/utils/model_choices.py:20
+msgid "Transit"
+msgstr ""
+
+#: booking/forms.py:63 booking/models.py:77
+msgid "From"
+msgstr ""
+
+#: booking/forms.py:64 booking/models.py:78
+msgid "To"
+msgstr ""
+
+#: booking/forms.py:69
+msgid "Passengers"
+msgstr ""
+
+#: booking/forms.py:117 booking/forms.py:129
+msgid "The date cannot be in the past."
+msgstr ""
+
+#: booking/forms.py:132
+msgid "This field is required."
+msgstr ""
+
+#: booking/forms.py:146
+msgid "You have to choose different directions for booking"
+msgstr ""
+
+#: booking/forms.py:154
+msgid "For booking you must to have a passenger or a cargo."
+msgstr ""
+
+#: booking/forms.py:158
+#, python-format
+msgid "Maximum number of vehicles: %(value)s"
+msgstr ""
+
+#: booking/forms.py:271
+msgid "Seat for return way"
+msgstr ""
+
+#: booking/forms.py:278
+msgid "Seat for away"
+msgstr ""
+
+#: booking/models.py:40 booking/models.py:115
+msgid "Port"
+msgstr ""
+
+#: booking/models.py:41
+msgid "Ports"
+msgstr ""
+
+#: booking/models.py:63
+msgid "Terminal"
+msgstr ""
+
+#: booking/models.py:64
+msgid "Terminals"
+msgstr ""
+
+#: booking/models.py:90 booking/models.py:116 booking/models.py:173
+#: booking/models.py:262 booking/models.py:288
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:123
+msgid "Direction"
+msgstr ""
+
+#: booking/models.py:91
+msgid "Directions"
+msgstr ""
+
+#: booking/models.py:100 booking/models.py:105
+msgid "İki eyni istiqamət seçmək olmaz"
+msgstr ""
+
+#: booking/models.py:117 booking/models.py:264 booking/models.py:290
+#: booking/models.py:604
+#: booking/templates/booking/user_port/booking_completed.html:54
+msgid "Price"
+msgstr ""
+
+#: booking/models.py:118
+msgid "Transit price"
+msgstr ""
+
+#: booking/models.py:127
+msgid "PortFee"
+msgstr ""
+
+#: booking/models.py:128
+msgid "PortFees"
+msgstr ""
+
+#: booking/models.py:144
+msgid "Load Capacity"
+msgstr ""
+
+#: booking/models.py:159 booking/models.py:172 booking/models.py:261
+#: booking/models.py:287 booking/models.py:310
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:122
+msgid "Vessel"
+msgstr ""
+
+#: booking/models.py:174
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:124
+msgid "Arrival date"
+msgstr ""
+
+#: booking/models.py:175
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:125
+msgid "Departure date"
+msgstr ""
+
+#: booking/models.py:176 booking/templates/booking/admin_port/booking.html:68
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:121
+#: booking/templates/booking/user_port/booking.html:21
+msgid "Schedule ID"
+msgstr ""
+
+#: booking/models.py:206
+msgid "Vessels Schedule"
+msgstr ""
+
+#: booking/models.py:207
+msgid "Vessels Schedules"
+msgstr ""
+
+#: booking/models.py:220
+msgid "Length"
+msgstr ""
+
+#: booking/models.py:221
+msgid "Height"
+msgstr ""
+
+#: booking/models.py:227
+msgid "Cargo Type"
+msgstr ""
+
+#: booking/models.py:228
+msgid "Cargo Types"
+msgstr ""
+
+#: booking/models.py:241 booking/models.py:313
+msgid "Count"
+msgstr ""
+
+#: booking/models.py:248
+msgid "Passenger Transport Type"
+msgstr ""
+
+#: booking/models.py:249
+msgid "Passenger Transport Types"
+msgstr ""
+
+#: booking/models.py:263 booking/models.py:420
+msgid "Cargo type"
+msgstr ""
+
+#: booking/models.py:274
+msgid "Vessel Cargo Fee"
+msgstr ""
+
+#: booking/models.py:275
+msgid "Vessel Cargo Fees"
+msgstr ""
+
+#: booking/models.py:289 booking/models.py:311 booking/models.py:459
+msgid "Passenger transport type"
+msgstr ""
+
+#: booking/models.py:300
+msgid "Vessel Passenger Fee"
+msgstr ""
+
+#: booking/models.py:301
+msgid "Vessel Passenger Fees"
+msgstr ""
+
+#: booking/models.py:319
+msgid "Vessel Passenger Capacity"
+msgstr ""
+
+#: booking/models.py:320
+msgid "Vessel Passenger Capacities"
+msgstr ""
+
+#: booking/models.py:333
+msgid "Cargo count"
+msgstr ""
+
+#: booking/models.py:334
+msgid "Passenger count"
+msgstr ""
+
+#: booking/models.py:338 booking/models.py:378
+msgid "Done"
+msgstr ""
+
+#: booking/models.py:377
+#: booking/templates/booking/admin_port/booking_step_two.html:93
+#: booking/templates/booking/user_port/booking_select_ship.html:46
+msgid "Voyage"
+msgstr ""
+
+#: booking/models.py:404 booking/models.py:405
+msgid "Booking Information"
+msgstr ""
+
+#: booking/models.py:418 booking/models.py:458 booking/models.py:597
+#: booking/templates/booking/admin_port/booking_step_one.html:5
+#: booking/templates/booking/admin_port/booking_step_one.html:46
+#: booking/templates/booking/admin_port/booking_step_three.html:5
+#: booking/templates/booking/admin_port/booking_step_three.html:46
+#: booking/templates/booking/admin_port/booking_step_two.html:5
+#: booking/templates/booking/admin_port/booking_step_two.html:46
+#: booking_payment/templates/booking_payment/admin_port/payment_page.html:5
+#: booking_payment/templates/booking_payment/admin_port/payment_page.html:46
+#: templates/admin_port/layout.html:174 templates/user_port/base.html:148
+msgid "Booking"
+msgstr ""
+
+#: booking/models.py:421
+msgid "Mark/Model"
+msgstr ""
+
+#: booking/models.py:422
+msgid "Plate NO"
+msgstr ""
+
+#: booking/models.py:445
+msgid "Booking Cargo Item"
+msgstr ""
+
+#: booking/models.py:446
+msgid "Booking Cargo Items"
+msgstr ""
+
+#: booking/models.py:461
+msgid "First name"
+msgstr ""
+
+#: booking/models.py:462
+msgid "Last name"
+msgstr ""
+
+#: booking/models.py:463
+msgid "Gender"
+msgstr ""
+
+#: booking/models.py:465
+msgid "Birth date"
+msgstr ""
+
+#: booking/models.py:488
+msgid "Booking Passenger Item"
+msgstr ""
+
+#: booking/models.py:489
+msgid "Booking Passenger Items"
+msgstr ""
+
+#: booking/models.py:503 booking/models.py:562
+#: booking/templates/booking/admin_port/agent_balance_list.html:85
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:83
+msgid "Amount"
+msgstr ""
+
+#: booking/models.py:515 templates/admin_port/layout.html.py:190
+msgid "Balance"
+msgstr ""
+
+#: booking/models.py:516
+msgid "Balances"
+msgstr ""
+
+#: booking/models.py:583
+msgid "Transaction agent"
+msgstr ""
+
+#: booking/models.py:584
+msgid "Transactions agent"
+msgstr ""
+
+#: booking/models.py:598
+msgid "Payment date"
+msgstr ""
+
+#: booking/models.py:599
+msgid "Transit fee"
+msgstr ""
+
+#: booking/models.py:600
+msgid "Transit percent"
+msgstr ""
+
+#: booking/models.py:601
+msgid "Passenger fee"
+msgstr ""
+
+#: booking/models.py:602
+msgid "Cargo fee"
+msgstr ""
+
+#: booking/models.py:603
+#: booking/templates/booking/admin_port/booking_step_three.html:133
+#: booking/templates/booking/admin_port/booking_step_three.html:140
+#: booking/templates/booking/admin_port/booking_step_two.html:97
+#: booking/templates/booking/user_port/booking_items_create.html:84
+#: booking/templates/booking/user_port/booking_items_create.html:91
+#: booking/templates/booking/user_port/booking_select_ship.html:50
+msgid "Port fee"
+msgstr ""
+
+#: booking/models.py:606
+msgid "Is Pay"
+msgstr ""
+
+#: booking/models.py:614 templates/admin_port/layout.html.py:197
+msgid "Transaction"
+msgstr ""
+
+#: booking/models.py:615
+msgid "Transactions"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_balance.html:5
+msgid "Agent balance"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_balance_list.html:5
+msgid "Agent Balance List"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_balance_list.html:46
+msgid "Agents balance"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_transaction_balance.html:5
+msgid "Agent Transaction Balance"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_transaction_balance.html:48
+msgid "Add Transaction"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_transaction_balance_create.html:5
+msgid "Agent Transaction Balance Create"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_transaction_balance_create.html:72
+#: booking/templates/booking/user_port/overview.html:24
+msgid "First Name"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_transaction_balance_create.html:73
+#: booking/templates/booking/user_port/overview.html:37
+msgid "Last Name"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_transaction_balance_create.html:74
+msgid "Username"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:6
+msgid "Agent Transaction Balance List"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:47
+msgid "Agent transaction list"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:84
+msgid "Transaction type"
+msgstr ""
+
+#: booking/templates/booking/admin_port/agent_transaction_balance_list.html:85
+msgid "Method"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking.html:5
+#: booking/templates/booking/admin_port/booking.html:46
+msgid "Booking detail"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking.html:69
+#: booking/templates/booking/admin_port/booking_check_items.html:81
+#: booking/templates/booking/user_port/booking.html:22
+#: templates/admin_port/layout.html:159
+msgid "Schedule"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking.html:71
+#: booking/templates/booking/user_port/booking.html:24
+msgid "Type"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:5
+msgid "Booking Check In"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:47
+msgid "Check in"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:86
+#: booking/templates/booking/admin_port/booking_list.html:82
+#: booking/templates/booking/user_port/user_booking_history.html:21
+msgid "Booking ID"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:88
+#: booking/templates/booking/admin_port/booking_list.html:84
+#: booking/templates/booking/user_port/user_booking_history.html:23
+msgid "Transit type"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:89
+#: booking/templates/booking/admin_port/booking_check_items.html:84
+#: booking/templates/booking/admin_port/booking_list.html:85
+#: booking/templates/booking/user_port/user_booking_history.html:24
+msgid "Booking type"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:90
+#: booking/templates/booking/admin_port/booking_list.html:86
+#: booking/templates/booking/user_port/user_booking_history.html:25
+msgid "Booking Status"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:91
+#: booking/templates/booking/admin_port/booking_list.html:88
+#: booking/templates/booking/user_port/user_booking_history.html:27
+msgid "Booking cargo count"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:92
+#: booking/templates/booking/admin_port/booking_list.html:89
+#: booking/templates/booking/user_port/user_booking_history.html:28
+msgid "Booking passenger count"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:101
+msgid "transit"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:103
+msgid "non transit"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_in.html:119
+msgid "Check in items"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_items.html:5
+msgid "Booking Check Items"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_items.html:46
+msgid "Check In"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_items.html:66
+msgid "Name: "
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_items.html:68
+msgid "Booking ID: "
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_items.html:69
+msgid "Status: "
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_items.html:82
+msgid "Direction (port > port)"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_items.html:83
+msgid "Direction (terminal > terminal)"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_items.html:112
+msgid "Ticket ID"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_check_items.html:113
+msgid "Is Done"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_list.html:5
+msgid "Bookings List"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_list.html:87
+#: booking/templates/booking/user_port/user_booking_history.html:26
+msgid "Booking created at"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_one.html:46
+#: booking/templates/booking/admin_port/booking_step_three.html:46
+#: booking/templates/booking/admin_port/booking_step_two.html:46
+#: booking_payment/templates/booking_payment/admin_port/payment_page.html:46
+#: templates/admin_port/layout.html:149 templates/admin_port/layout.html:166
+#: templates/admin_port/layout.html:180 templates/admin_port/layout.html:203
+msgid "Create"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_one.html:128
+#: booking/templates/booking/admin_port/booking_step_three.html:176
+#: booking/templates/booking/user_port/booking_items_create.html:126
+#: booking/templates/booking/user_port/booking_step_one.html:97
+#: templates/user_port/main.html:82
+msgid "Vehicles"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_one.html:159
+#: booking/templates/booking/user_port/booking_step_one.html:129
+#: templates/user_port/main.html:108
+msgid "Book Now"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:66
+#: booking/templates/booking/user_port/booking_items_create.html:17
+msgid "Booking and passenger details"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:74
+#: booking/templates/booking/admin_port/booking_step_three.html:106
+#: booking/templates/booking/admin_port/booking_step_three.html:116
+#: booking/templates/booking/admin_port/booking_step_three.html:135
+#: booking/templates/booking/admin_port/booking_step_three.html:217
+#: booking/templates/booking/user_port/booking_items_create.html:25
+#: booking/templates/booking/user_port/booking_items_create.html:57
+#: booking/templates/booking/user_port/booking_items_create.html:67
+#: booking/templates/booking/user_port/booking_items_create.html:86
+#: booking/templates/booking/user_port/booking_items_create.html:160
+#: booking/utils/model_choices.py:15
+msgid "Away"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:86
+#: booking/templates/booking/user_port/booking_items_create.html:37
+msgid "Return way"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:104
+#: booking/templates/booking/admin_port/booking_step_three.html:111
+#: booking/templates/booking/admin_port/booking_step_two.html:95
+#: booking/templates/booking/user_port/booking_items_create.html:55
+#: booking/templates/booking/user_port/booking_items_create.html:62
+#: booking/templates/booking/user_port/booking_select_ship.html:48
+msgid "Cargo"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:107
+#: booking/templates/booking/admin_port/booking_step_three.html:120
+#: booking/templates/booking/admin_port/booking_step_three.html:136
+#: booking/templates/booking/user_port/booking_items_create.html:58
+#: booking/templates/booking/user_port/booking_items_create.html:71
+#: booking/templates/booking/user_port/booking_items_create.html:87
+#: booking/utils/model_choices.py:16
+msgid "Return"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:114
+#: booking/templates/booking/admin_port/booking_step_three.html:127
+#: booking/templates/booking/admin_port/booking_step_two.html:96
+#: booking/templates/booking/user_port/booking_items_create.html:65
+#: booking/templates/booking/user_port/booking_items_create.html:78
+#: booking/templates/booking/user_port/booking_select_ship.html:49
+msgid "Passenger"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:152
+#: booking/templates/booking/user_port/booking_items_create.html:103
+msgid "Non-transit"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:159
+#: booking/templates/booking/user_port/booking_items_create.html:110
+msgid "Total"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:188
+#: booking/templates/booking/user_port/booking_items_create.html:138
+msgid "Away:"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:189
+#: booking/templates/booking/admin_port/booking_step_three.html:193
+#: booking/templates/booking/admin_port/booking_step_two.html:131
+#: booking/templates/booking/admin_port/booking_step_two.html:136
+#: booking/templates/booking/admin_port/booking_step_two.html:141
+#: booking/templates/booking/user_port/booking_items_create.html:138
+#: booking/templates/booking/user_port/booking_items_create.html:139
+#: booking/templates/booking/user_port/booking_select_ship.html:82
+#: booking/templates/booking/user_port/booking_select_ship.html:85
+#: booking/templates/booking/user_port/booking_select_ship.html:88
+msgid "usd"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:192
+#: booking/templates/booking/user_port/booking_items_create.html:139
+msgid "Return:"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:213
+#: booking/templates/booking/user_port/booking_items_create.html:157
+msgid "Passengers/Drivers"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:215
+#: booking/templates/booking/user_port/booking_items_create.html:159
+msgid "Availability:"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:217
+#: booking/templates/booking/user_port/booking_items_create.html:160
+msgid "spot"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:219
+#: booking/templates/booking/user_port/booking_items_create.html:161
+msgid "loading..."
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:243
+#: booking/templates/booking/user_port/booking_items_create.html:185
+msgid "Contact Person"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:268
+#: booking/templates/booking/admin_port/booking_step_two.html:168
+#: booking/templates/booking/user_port/booking_items_create.html:209
+#: booking/templates/booking/user_port/booking_select_ship.html:114
+msgid "Loading..."
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_three.html:269
+#: booking/templates/booking/user_port/booking_items_create.html:210
+msgid "Book now"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_two.html:94
+#: booking/templates/booking/user_port/booking_select_ship.html:47
+msgid "Date"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_two.html:104
+#: booking/templates/booking/user_port/booking_select_ship.html:56
+msgid "Select one of the options described below"
+msgstr ""
+
+#: booking/templates/booking/admin_port/booking_step_two.html:168
+#: booking/templates/booking/user_port/booking_select_ship.html:114
+msgid "Continue"
+msgstr ""
+
+#: booking/templates/booking/admin_port/vessel_schedule.html:5
+msgid "Vessel Shedule"
+msgstr ""
+
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:5
+msgid "Vessel Shedule List"
+msgstr ""
+
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:126
+msgid "Current passenger count"
+msgstr ""
+
+#: booking/templates/booking/admin_port/vessel_schedule_list.html:127
+msgid "Current cargo capacity"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking.html:5
+#: booking/templates/booking/user_port/user_booking_history.html:5
+msgid "User Booking History - Port of Baku"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking.html:12
+#: booking/templates/booking/user_port/user_booking_history.html:12
+#: templates/user_port/user_layout.html:34
+msgid "My Bookings"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:5
+msgid "Booking Complete - Port of Baku"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:22
+msgid "Baku - Turkmenbashi"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:25
+msgid "Booking details"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:32
+#: booking/templates/booking/user_port/booking_completed.html:70
+msgid "ID:"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:32
+msgid "ZJ7868AD879"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:35
+msgid "20-03-2016"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:36
+msgid "Baxtiyar"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:37
+msgid "BT331"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:43
+#: booking/templates/booking/user_port/booking_completed.html:81
+msgid "Tickets:"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:46
+#: booking/templates/booking/user_port/booking_completed.html:84
+msgid "ZJ7868AD879-1234546"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:46
+#: booking/templates/booking/user_port/booking_completed.html:84
+msgid "10AZ999"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:47
+#: booking/templates/booking/user_port/booking_completed.html:85
+msgid "ZJ7868AD879-1234777"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:47
+#: booking/templates/booking/user_port/booking_completed.html:85
+msgid "50AZ888"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:48
+#: booking/templates/booking/user_port/booking_completed.html:86
+msgid "ZJ7868AD879-1234888"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:48
+#: booking/templates/booking/user_port/booking_completed.html:86
+msgid "P77766666"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:57
+msgid "Vehicles:"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:57
+msgid "8787 usd"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:58
+msgid "Passengers:"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:58
+msgid "500 usd"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:59
+msgid "Port fee:"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:59
+msgid "100 usd"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:70
+msgid "DJ7868AD833"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:73
+msgid "29-03-2016"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:74
+msgid "Berkarar"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:75
+msgid "TB221"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:92
+msgid "Price "
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:95
+msgid "Vehicles: "
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:95
+msgid "8787 usd "
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:96
+msgid "Passengers: "
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:96
+msgid "500 usd "
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:97
+msgid "Port fee: "
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:97
+msgid "100 usd "
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:111
+msgid "Booking: "
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:115
+msgid "1 Passenger"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:116
+msgid "1000 usd"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:119
+msgid "2 Vehicles"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:120
+msgid "17574 usd"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:123
+msgid "Port-fee"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:124
+msgid "200 usd"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:136
+msgid "total:"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:136
+msgid "18774 USD"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:140
+msgid "Print "
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_completed.html:141
+msgid "Download "
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_items_create.html:5
+msgid "Booking Items Create - Port of Baku"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_select_ship.html:5
+msgid "Booking Select Ship - Port of Baku"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_step_one.html:150
+#: templates/user_port/main.html:129
+msgid "Main Cargo Terminal"
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_step_one.html:152
+#: templates/user_port/main.html:131
+msgid ""
+"The major trading partners of the Port of Baku are Aktau, Turkmenbashy, "
+"Anzali and\n"
+"                                Amirabad. The main cargo terminal has six "
+"berths, with a total length of 866 meters,\n"
+"                                including a Ro-Ro berth with a water depth "
+"of 7 meters. The terminal can handle 3\n"
+"                                vessels, up to 150 wagons and 100 trucks "
+"simultaneously. The berths are equipped with 16\n"
+"                                portal cranes with lifting capacity of "
+"1.5-10 tons and 100 roll trailers.™'The port also\n"
+"                                offers 24,000 m2 of open warehouse storage "
+"space, and 10,000 m2 inside sheltered\n"
+"                                warehouses."
+msgstr ""
+
+#: booking/templates/booking/user_port/booking_step_one.html:160
+#: templates/user_port/main.html:139
+#, python-format
+msgid ""
+"The main cargo terminal primarily handles general and dry cargo. The trade "
+"at the\n"
+"                                terminal in 2009 and 2010 consisted mostly "
+"of imported cargo (82%%), followed by transit\n"
+"                                (13%%) and exports (5%%). Cargo traffic "
+"almost tripled between 2009 and 2010, going from\n"
+"                                290,000 to 833,000 tons (Figure 2.24)due to "
+"an increase in imports from 240,000 tons in\n"
+"                                2009 up to 681,000 tons in 2010. The imports "
+"were dominated by construction materials -\n"
+"                                80%% (cement clinker) from two Iranian ports "
+"(Anzali and Amirabad); aluminum oxide,\n"
+"                                grain, and chemical products - 15%% from "
+"Aktau and Turkmenbashy; and general construction\n"
+"                                equipment and machinery - 5%% from Europe."
+msgstr ""
+
+#: booking/templates/booking/user_port/overview.html:5
+msgid "Overview - Port of Baku"
+msgstr ""
+
+#: booking/templates/booking/user_port/overview.html:15
+#: templates/user_port/user_layout.html:35
+msgid "Settings"
+msgstr ""
+
+#: booking/templates/booking/user_port/overview.html:18
+msgid "Personal Information"
+msgstr ""
+
+#: booking/templates/booking/user_port/overview.html:50
+#: templates/admin_port/layout-login.html:19
+msgid "Email"
+msgstr ""
+
+#: booking/templates/booking/user_port/overview.html:63
+msgid "Phone number"
+msgstr ""
+
+#: booking/templates/booking/user_port/overview.html:77
+msgid "Statistics"
+msgstr ""
+
+#: booking/templates/booking/user_port/overview.html:83
+msgid "Booked"
+msgstr ""
+
+#: booking/templates/booking/user_port/overview.html:96
+msgid "Payed"
+msgstr ""
+
+#: booking/templates/booking/user_port/overview.html:103
+msgid "0"
+msgstr ""
+
+#: booking/utils/model_choices.py:5
+msgid "Male"
+msgstr ""
+
+#: booking/utils/model_choices.py:6
+msgid "Female"
+msgstr ""
+
+#: booking/utils/model_choices.py:10
+msgid "One way"
+msgstr ""
+
+#: booking/utils/model_choices.py:11
+msgid "Round trip"
+msgstr ""
+
+#: booking/utils/model_choices.py:21
+msgid "Non Transit"
+msgstr ""
+
+#: booking/utils/model_choices.py:25
+msgid "Income"
+msgstr ""
+
+#: booking/utils/model_choices.py:26
+msgid "Expense"
+msgstr ""
+
+#: booking_payment/templates/booking_payment/error_page.html.html:35
+msgid "Ödəniş uğurla tamamlanmadı ! Bir daha cəhd edin"
+msgstr ""
+
+#: booking_payment/templates/booking_payment/error_page.html.html:36
+msgid "Try pay"
+msgstr ""
+
+#: booking_payment/templates/booking_payment/success_page.html:6
+msgid "Payment success pages"
+msgstr ""
+
+#: booking_payment/templates/booking_payment/success_page.html:35
+msgid "Ödəniş uğurla tamamlandı"
+msgstr ""
+
+#: port_app/settings.py:157
+msgid "Azerbaijan"
+msgstr ""
+
+#: port_app/settings.py:158 templates/admin_port/layout.html.py:68
+msgid "English"
+msgstr ""
+
+#: port_app/settings.py:159
+msgid "Russia"
+msgstr ""
+
+#: templates/admin_port/layout-login.html:29
+msgid "Remember me"
+msgstr ""
+
+#: templates/admin_port/layout-login.html:55
+msgid "Or login with"
+msgstr ""
+
+#: templates/admin_port/layout-login.html:61
+msgid "Create an account"
+msgstr ""
+
+#: templates/admin_port/layout.html:48
+msgid "Logout"
+msgstr ""
+
+#: templates/admin_port/layout.html:74
+msgid "Azərbaycanca"
+msgstr ""
+
+#: templates/admin_port/layout.html:115
+msgid "Navigation"
+msgstr ""
+
+#: templates/admin_port/layout.html:146 templates/admin_port/layout.html:163
+#: templates/admin_port/layout.html:177 templates/admin_port/layout.html:192
+#: templates/admin_port/layout.html:200
+msgid "List"
+msgstr ""
+
+#: templates/admin_port/layout.html:155
+msgid "Check-in"
+msgstr ""
+
+#: templates/admin_port/layout.html:187
+msgid "Billing"
+msgstr ""
+
+#: templates/user_port/base.html:67 templates/user_port/base.html.py:141
+msgid "Elet logo"
+msgstr ""
+
+#: templates/user_port/base.html:103 templates/user_port/base.html.py:153
+#: templates/user_port/base.html:164
+msgid "Log in"
+msgstr ""
+
+#: templates/user_port/base.html:105 templates/user_port/base.html.py:169
+msgid "Register now"
+msgstr ""
+
+#: templates/user_port/base.html:109 templates/user_port/base.html.py:167
+msgid "Forgotten PIN/Password?"
+msgstr ""
+
+#: templates/user_port/base.html:114
+msgid "My account"
+msgstr ""
+
+#: templates/user_port/base.html:115
+msgid "Log out"
+msgstr ""
+
+#: templates/user_port/base.html:149
+msgid "About Port"
+msgstr ""
+
+#: templates/user_port/base.html:150
+msgid "Business & Services"
+msgstr ""
+
+#: templates/user_port/base.html:151
+msgid "Contacts"
+msgstr ""
+
+#: templates/user_port/base.html:157
+msgid "Login ID"
+msgstr ""
+
+#: templates/user_port/base.html:160
+msgid "PIN/Password"
+msgstr ""
+
+#: templates/user_port/base.html:192
+msgid "PORT OF BAKU © 2015"
+msgstr ""
+
+#: templates/user_port/base.html:195
+msgid "CONTACTS"
+msgstr ""
+
+#: templates/user_port/base.html:198
+msgid "ABOUT US"
+msgstr ""
+
+#: templates/user_port/base.html:201
+msgid "NEWS & PUBLICATIONS"
+msgstr ""
+
+#: templates/user_port/base.html:226
+msgid "Virtual Karabakh"
+msgstr ""
+
+#: templates/user_port/base.html:235
+msgid "White logo"
+msgstr ""
+
+#: templates/user_port/main.html:5
+msgid "Main page"
+msgstr ""
+
+#: templates/user_port/user_layout.html:33
+msgid "Overview"
+msgstr ""
+
+#: templates/user_port/user_layout.html:36
+msgid "Sign out"
+msgstr ""

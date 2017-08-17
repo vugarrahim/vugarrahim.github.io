@@ -1,0 +1,158 @@
+{% extends 'user_port/main.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block page-title %}  {% trans 'Payment success pages' %} {% endblock page-title %}
+
+
+{% block vendor-js %}
+    {{ block.super }}
+
+    <!-- For map -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+{% endblock vendor-js %}
+
+{% block page-js %}
+<script>
+    var CARGO_LIMIT = 6;
+</script>
+{% endblock page-js %}
+
+{% block content %}
+
+<!-- ====================================================
+================= CONTENT ===============================
+===================================================== -->
+<section class="pay-section">
+
+    <div class="container bg-white">
+
+        <div class="row">
+
+            <div class="col-sm-6 col-sm-offset-3">
+
+                <div class="alert alert-success" role="alert">{% trans 'Ödəniş uğurla tamamlandı' %}</div>
+
+            </div>
+            <!-- /.col-sm-6 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <div class="container">
+            <div class="bp-detail-side clearfix">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="booking-detail-box">
+
+                            <div class="panel panel-default section">
+                                <div class="panel-heading"><p class="nm font-big"><strong>ID</strong>: {{ booking.booking_id}}</p></div>
+                                <div class="panel-body">
+
+                                    <h4 class="box-title">Booking details</h4>
+
+                                    <div class="section">
+                                        {% for book in bookings %}
+                                            <div class="row">
+
+                                            <div class="col-lg-4">
+                                                <p class="big-title"> <span class="fa fa-ship"></span> {{ book.booking.vessel_schedule.direction.from_d.port }} - {{ book.booking.vessel_schedule.direction.to.port }} </p>
+
+                                                <ul class="title-list list-unstyled">
+                                                    <li>{{ book.booking.vessel_schedule.departure_date }}</li>
+                                                    <li>{{ book.booking.vessel_schedule.vessel }}</li>
+                                                    <li>{{ book.booking.vessel_schedule.schedule_id }}</li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.col-lg-4 -->
+
+                                            <div class="col-lg-4">
+                                                <p class="small-title font-italic"> Tickets: </p>
+
+                                                <ul class="list-unstyled">
+                                                    {% for item in book.items %}
+                                                        {% if item.class_name == 'cargo' %}
+                                                            <li> <strong> <span class="fa fa-truck"></span> {{ item.ticket_id }}</strong> </li>
+                                                        {% elif item.class_name == 'passenger' %}
+                                                            <li> <strong> <span class="fa fa-user"></span> ZJ7868AD879-1234888</strong>  </li>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                            <!-- /.col-lg-4 -->
+
+                                            <div class="col-lg-4">
+                                                <p class="small-title"> Price </p>
+
+                                                <ul class="list-unstyled">
+                                                    <li> <strong> Vehicles: </strong> - {{ book.booking.transaction.cargo_fee }} usd </li>
+                                                    <li> <strong> Passengers: </strong> - {{ book.booking.transaction.passenger_fee }} usd </li>
+                                                    <li> <strong> Port fee: </strong> - {{ book.booking.transaction.port_fee }} usd </li>
+                                                    <li> <strong> Transit: </strong> - {{ book.booking.transaction.transit_fee}} <small>({{book.booking.transaction.transit_percent}}%)</small> </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.col-lg-4 -->
+
+                                        </div>
+                                        {% endfor %}
+                                        <!-- /.row -->
+
+                                        <!-- /.row -->
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-lg-8">
+
+                                            <h4 class="box-title">Payment detail: </h4>
+
+                                            <ul class="list-unstyled booking-detail-list">
+                                                <li class="clearfix">
+                                                    <span class="pull-left">Passenger </span>
+                                                    <span class="pull-right">{{ payment_detail.passenger_fee }} usd</span>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <span class="pull-left">Vehicles </span>
+                                                    <span class="pull-right">{{ payment_detail.cargo_fee }} usd</span>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <span class="pull-left">Port-fee</span>
+                                                    <span class="pull-right">{{ payment_detail.port_fee }} usd</span>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                        <!-- /.col-lg-8 -->
+
+                                    </div>
+                                    <!-- /.row -->
+
+                                </div>
+                                <div class="panel-footer">
+                                    <h3 class="total-price nm"><span>total:</span> {{ payment_detail.total }} USD</h3>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-default detail-btns"> <i class="fa fa-print"></i> Print </button>
+                            <button type="button" class="btn btn-default detail-btns"> <i class="fa fa-download"></i> Download </button>
+
+                        </div>
+
+                    </div>
+                        <!-- /.booking-detail-box -->
+
+                    </div>
+                    <!-- /.col-sm-10 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.bp-detail-side -->
+        </div>
+    <!-- /.container -->
+
+</section>
+    <!-- /.location-section -->
+{% endblock content %}

@@ -1,0 +1,90 @@
+[
+{
+        "model": "booking.vessel",
+        "pk": 1,
+        "fields": {
+            "name": "Fikret Emirov",
+            "name_az": "Fikret Emirov",
+            "name_en": "Fikret Emirov",
+            "name_ru": "Fikret Emirov",
+            "description": null,
+            "description_az": null,
+            "description_en": null,
+            "description_ru": null,
+            "cargo_availability": true,
+            "passenger_availability": true,
+            "load_capacity": 544.5,
+            "imo": "8501012",
+            "mmsi": "423013100",
+            "call_sign": "4JGZ",
+            "created_at": "2016-02-29T17:14:20.482Z",
+            "updated_at": "2016-02-29T22:11:14.251Z"
+        }
+    },
+    {
+        "model": "booking.vessel",
+        "pk": 2,
+        "fields": {
+            "name": "Berkarar",
+            "name_az": "Berkarar",
+            "name_en": "Berkarar",
+            "name_ru": "Berkarar",
+            "description": null,
+            "description_az": null,
+            "description_en": null,
+            "description_ru": null,
+            "cargo_availability": true,
+            "passenger_availability": true,
+            "load_capacity": 858.0,
+            "imo": "9684330",
+            "mmsi": "434123000",
+            "call_sign": "EZHO",
+            "created_at": "2016-02-29T17:17:29.352Z",
+            "updated_at": "2016-02-29T22:02:26.350Z"
+        }
+    },
+    {
+        "model": "booking.vessel",
+        "pk": 3,
+        "fields": {
+            "name": "B\u0259xtiyar",
+            "name_az": "B\u0259xtiyar",
+            "name_en": "BAGTYYAR",
+            "name_ru": "BAGTYYAR",
+            "description": null,
+            "description_az": null,
+            "description_en": null,
+            "description_ru": null,
+            "cargo_availability": false,
+            "passenger_availability": false,
+            "load_capacity": 858.0,
+            "imo": "9684342",
+            "mmsi": "434123200",
+            "call_sign": "EZHQ",
+            "created_at": "2016-02-29T17:25:12.306Z",
+            "updated_at": "2016-02-29T22:04:13.733Z"
+        }
+    },
+    {
+        "model": "booking.vessel",
+        "pk": 4,
+        "fields": {
+            "name": "Qara Qarayev",
+            "name_az": "Qara Qarayev",
+            "name_en": "Gara Garayev",
+            "name_ru": "Gara Garayev",
+            "description": null,
+            "description_az": null,
+            "description_en": null,
+            "description_ru": null,
+            "cargo_availability": true,
+            "passenger_availability": true,
+            "load_capacity": 544.5,
+            "imo": "8316041",
+            "mmsi": "423014100",
+            "call_sign": "4JEH",
+            "created_at": "2016-02-29T17:27:35.177Z",
+            "updated_at": "2016-02-29T22:08:23.530Z"
+        }
+    }
+]

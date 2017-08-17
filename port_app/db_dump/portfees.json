@@ -1,0 +1,26 @@
+[
+{
+        "model": "booking.portfee",
+        "pk": 1,
+        "fields": {
+            "port": 1,
+            "direction": 1,
+            "price": 2.0,
+            "transit_price": 18.0,
+            "created_at": "2016-02-29T20:56:44.524Z",
+            "updated_at": "2016-03-07T08:44:54.688Z"
+        }
+    },
+    {
+        "model": "booking.portfee",
+        "pk": 2,
+        "fields": {
+            "port": 2,
+            "direction": 2,
+            "price": 2.0,
+            "transit_price": 18.0,
+            "created_at": "2016-03-05T19:57:34.654Z",
+            "updated_at": "2016-03-07T08:44:47.506Z"
+        }
+    }
+]

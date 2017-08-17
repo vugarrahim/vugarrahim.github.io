@@ -1,0 +1,77 @@
+[
+{
+        "model": "booking.passengertransporttype",
+        "pk": 1,
+        "fields": {
+            "name": "Cabin - 6 p",
+            "name_az": "Cabin - 6 p",
+            "name_en": "",
+            "name_ru": "",
+            "passenger_count": 6,
+            "description": null,
+            "description_az": null,
+            "description_en": null,
+            "description_ru": null
+        }
+    },
+    {
+        "model": "booking.passengertransporttype",
+        "pk": 2,
+        "fields": {
+            "name": "Kayut - 4 n\u0259f\u0259rlik",
+            "name_az": "Kayut - 4 n\u0259f\u0259rlik",
+            "name_en": "Cabin - 4 p",
+            "name_ru": "Cabin - 4 p",
+            "passenger_count": 4,
+            "description": null,
+            "description_az": null,
+            "description_en": null,
+            "description_ru": null
+        }
+    },
+    {
+        "model": "booking.passengertransporttype",
+        "pk": 3,
+        "fields": {
+            "name": "Kayut - 2 n\u0259f\u0259rlik",
+            "name_az": "Kayut - 2 n\u0259f\u0259rlik",
+            "name_en": "Cabin - 2 p",
+            "name_ru": "Cabin - 2 p",
+            "passenger_count": 2,
+            "description": null,
+            "description_az": null,
+            "description_en": null,
+            "description_ru": null
+        }
+    },
+    {
+        "model": "booking.passengertransporttype",
+        "pk": 4,
+        "fields": {
+            "name": "Cabin - 1 p",
+            "name_az": "Cabin - 1 p",
+            "name_en": "Cabin - 1 p",
+            "name_ru": "Cabin - 1 p",
+            "passenger_count": 1,
+            "description": null,
+            "description_az": null,
+            "description_en": null,
+            "description_ru": null
+        }
+    },
+    {
+        "model": "booking.passengertransporttype",
+        "pk": 5,
+        "fields": {
+            "name": "Salon",
+            "name_az": "Salon",
+            "name_en": "Hall",
+            "name_ru": "Hall",
+            "passenger_count": 170,
+            "description": "Hall for 170 pessenger",
+            "description_az": "Hall for 170 pessenger",
+            "description_en": null,
+            "description_ru": null
+        }
+    }
+]

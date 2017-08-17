@@ -1,0 +1,48 @@
+{% extends 'user_port/main.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block page-title %}  {% trans 'Booking - Port of Baku' %} {% endblock page-title %}
+
+
+{% block vendor-js %}
+    {{ block.super }}
+
+    <!-- For map -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+{% endblock vendor-js %}
+
+{% block page-js %}
+<script>
+    var CARGO_LIMIT = 6;
+</script>
+{% endblock page-js %}
+
+{% block content %}
+
+<!-- ====================================================
+================= CONTENT ===============================
+===================================================== -->
+<section class="pay-section">
+
+    <div class="container bg-white">
+
+        <div class="row">
+
+            <div class="col-sm-6 col-sm-offset-3">
+
+                <div class="alert alert-danger" role="alert">{% trans 'Ödəniş uğurla tamamlanmadı ! Bir daha cəhd edin' %}</div>
+                <a href="{% url 'booking:booking-create' %}"><button type="submit" class="btn blue-styled-btn btn-lg"><strong>{% trans 'Try pay' %}</strong></button></a>
+            </div>
+            <!-- /.col-sm-6 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</section>
+    <!-- /.location-section -->
+{% endblock content %}

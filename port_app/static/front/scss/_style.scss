@@ -1,0 +1,422 @@
+/*  Additional styles
+----------------------------------------------------*/
+
+// Body reset
+body{
+  margin: 0;
+}
+
+// Wrapper
+.wrapper{
+  background-color: $el-gray;
+  //padding-top: 38px;
+}
+
+// Slogan
+.slogan{
+  float: left;
+  width: 234px;
+  height: 56px;
+  @include marg-topNbottom(45px);
+  margin-left: 56px;
+  background: url('../img/slogan.png') 0 0 no-repeat;
+}
+
+.changeInputBox{
+  width: 70px;
+}
+
+.table-helper{
+  font-size: 12px;
+  font-style: italic;
+}
+
+.overview-box{
+  @include padd-leftNright(20px);
+
+  .title-box{
+    background-color: #415973;
+    font-weight: 300;
+    padding: 10px;
+
+    .title{
+      color: $el-white;
+      font-size: 30px;
+      margin: 0;
+      font-weight: 300;
+    }
+    .title-helper{
+      color: $el-white;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: block;
+      margin-top: 5px;
+    }
+  }
+
+  .left-menu-box{
+    padding-top: 20px;
+    background-color: #f2f2f2;
+  }
+}
+.gray-list-group{
+  background-color: #f2f2f2;
+
+  .list-group-item{
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 0;
+    font-size: 16px;
+    padding: 15px 10px;
+    border-left: 0 !important;
+    border-right: 0 !important;
+
+    .fa{
+      color: #c3c3c3;
+    }
+
+    &:first-child{
+      border-top: 0 !important;
+    }
+    &:last-child{
+      border-bottom: 0 !important;
+    }
+
+    &.active{
+      background-color: #ffffff;
+      color: #333;
+      border: 1px solid #ddd;
+    }
+  }
+}
+
+.overview-title{
+  color: #111;
+  font-weight: 300;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+.sub-overview-title{
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #111;
+}
+.overview-description{
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-style: italic;
+  font-family: Georgia;
+}
+
+.category{
+  position: relative;
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #999;
+}
+.category-title{
+  position: relative;
+  //font-weight: 400;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.conditionBox{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.over-breadcrumb{
+  background-color: #ffffff;
+  margin: -30px -20px 20px -20px;
+  font-style: italic;
+  padding: 10px 15px;
+  border-bottom: 1px dashed #9D9D9D;
+
+  li{
+    font-size: 14px;
+    color: #888;
+
+    .fa{
+      color: #9D9D9D;
+    }
+  }
+
+  li+li{
+
+    &:before{
+      content: "> ";
+    }
+  }
+}
+
+.sign-input{
+  border: 1px solid #dedede;
+  background-color: transparent;
+  padding: 14px 10px;
+  width: 100%;
+  color: #333;
+  border-radius: 0;
+  box-shadow: none;
+  height: auto !important;
+
+  &:focus, &:visited, &:active{
+    box-shadow: none;
+    outline: none;
+  }
+
+  @include placeholder(#333);
+}
+
+.sign-title{
+  color: #111;
+  font-weight: 300;
+  margin-top: 25px;
+  font-size: 34px;
+  margin-bottom: 0;
+  font-family: Lato;
+}
+.sign-helper{
+  font-family: Georgia;
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 35px;
+  color: #666;
+}
+
+.booking-table{
+
+  tbody{
+
+    tr{
+
+      td{
+
+        &:first-child{
+
+          .fa{
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Table schedule 2nd step */
+.booking-step-2 {
+  @include marg-topNbottom(10%);
+}
+.table-schedule {
+
+  caption {
+    background-color: #f7f7f7;
+    border-top: 1px dotted #ddd;
+    border-bottom: 1px dotted #ddd;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    h4 {
+      color: #222;
+      font-weight: 400;
+    }
+
+    .fa {
+      color: $brand-primary;
+    }
+
+    time {
+      font-size: .9em;
+      margin-top: 11px;
+    }
+  }
+
+  thead {
+    color: #888;
+  }
+
+  tbody {
+    td {
+      border-right: 1px dotted #eee;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
+.booking-step-3 {
+
+  .border-left {
+    border-left: 1px solid #ccc;
+  }
+
+  .cargo-formset {
+    label {
+      display: block;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .form-group {
+      margin-right: 3%;
+    }
+  }
+
+  .passenger-formset {
+    @extend .cargo-formset;
+
+    .form-group {
+      margin-bottom: 1%;
+    }
+  }
+
+
+
+  .row-form {
+
+    .formset-form {
+      &:hover {
+        background-color: #e9e9e9;
+      }
+    }
+
+    .side-title {
+      @include padd-topNbottom(10px);
+      background-color: #eee;
+      padding-left: 10px;
+      margin-top: 0;
+      margin-right: -15px;
+    }
+
+    &:hover {
+      .side-title {
+        background-color: #ccc;
+      }
+    }
+  }
+}
+
+.font-italic{
+  font-style: italic;
+}
+
+.booking-detail-box{
+  @include marg-topNbottom(50px);
+
+  .big-title{
+    font-weight: normal;
+
+    .fa{
+      font-size: 26px;
+    }
+  }
+
+  .small-title{
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .title-list{
+    padding-left: 34px;
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .booking-detail-list{
+
+    >li{
+      border-bottom: 1px dashed rgba(0, 0, 0, .6);
+    }
+  }
+
+  .total-price{
+
+    span{
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+  .detail-btns{
+    border-radius: 0;
+  }
+}
+
+.font-small{
+  font-size: 18px;
+}
+
+
+// login zone
+.login-important{
+  margin-top: 14px;
+  margin-bottom: 2px;
+
+  span{
+    color: #454750;
+    display: inline-block;
+    @include padd-leftNright(6px);
+    font-weight: bold;
+  }
+  a{
+    display: inline-block;
+    border-left: 1px solid #454750;
+    text-decoration: underline;
+    padding-left: 6px;
+  }
+}
+.my-account{
+  margin-bottom: 10px;
+
+  a{
+    display: inline-block;
+    text-decoration: underline;
+    padding-left: 6px;
+  }
+}
+
+
+
+#price-block.is_stuck{
+  right: 0;
+}
+
+// errors
+.alert {
+  &.small {
+    padding: 7px;
+  }
+
+  .errorlist {
+    @extend .list-unstyled;
+  }
+}
+
+#price-block.is_stuck{
+  right: 0;
+}
+// availability
+
+.list-availability {
+  .title {
+    margin-top: 10px;
+    color: #999999;
+  }
+}
+
+#price-block {
+  &.is_stuck {
+    z-index: 999;
+    margin-left: 16%;
+  }
+}
+.font-big{
+  font-size: 20px;
+}
+
+

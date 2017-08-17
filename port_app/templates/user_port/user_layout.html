@@ -1,0 +1,53 @@
+{% extends 'user_port/main.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block page-title %}  {% trans 'User' %}  {% endblock page-title %}
+
+
+{% block content %}
+
+<!-- ====================================================
+================= CONTENT ===============================
+===================================================== -->
+<section class="nav-section">
+        <div class="container">
+            <div class="nav-content-side overview-box">
+                <ol class="breadcrumb over-breadcrumb">
+                    <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                    <li class="active">{% block selected-menu-title %}  {% endblock %}</li>
+                </ol>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="title-box clearfix text-center">
+                            <h3 class="title">{{ request.user.get_full_name }}</h3>
+                            <p class="title-helper">Member Since {{ request.user.date_joined|date:"d.m.Y"}}</p>
+                        </div>
+                        <!-- /.title-box -->
+                        {% url 'booking:user-overview' as overview %}
+                        {% url 'booking:user-booking-history' as history %}
+                        {% url 'accounts:profile-update' as update_profile %}
+                        {% url 'accounts:user-logout' as logout %}
+                        <div class="left-menu-box">
+                            <div class="list-group gray-list-group">
+                                <a href="{% url 'booking:user-overview' %}" {% if request.path == overview %} class="list-group-item active" {% else %} class="list-group-item" {% endif %}><i class="fa fa-user"></i> {% trans 'Overview' %}</a>
+                                <a href="{% url 'booking:user-booking-history' %}" {% if request.path == history %} class="list-group-item active" {% else %} class="list-group-item" {% endif %}><i class="fa fa-shopping-cart"></i> {% trans 'My Bookings' %}</a>
+                                <a href="{% url 'accounts:profile-update' %}" {% if request.path == update_profile %} class="list-group-item active" {% else %} class="list-group-item" {% endif %}><i class="fa fa-cogs"></i> {% trans 'Settings' %}</a>
+                                <a href="{% url 'accounts:user-logout' %}" class="list-group-item"><i class="fa fa-sign-out"></i> {% trans 'Sign out' %}</a>
+                            </div>
+                        </div>
+                        <!-- /.left-menu-box -->
+                    </div>
+                    <!-- /.col-md-3 -->
+                    {% block selected-menu-content %}
+                    {% endblock %}
+                    <!-- /.col-md-9 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.nav-content-side -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.nav-section -->
+{% endblock content %}
